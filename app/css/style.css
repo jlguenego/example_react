@@ -24,6 +24,10 @@ h1 {
     animation: left 500ms;
 }
 
+ul {
+    padding: 1em;
+}
+
 @keyframes left {
     from {
         opacity: 0;
