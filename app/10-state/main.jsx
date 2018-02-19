@@ -8,7 +8,8 @@ class ProgressiveWrite extends React.Component {
         super(props);
         console.log('instantiate component');
         this.state = {
-            length: 0
+            length: 0,
+            hue: 240,
         };
     }
 
@@ -45,7 +46,9 @@ class ProgressiveWrite extends React.Component {
     // For instance when the state change.
     // Or when the props change.
     render() {
-        const result = <div className="hello">&nbsp;{this.props.text.substring(0, this.state.length)}</div>;
+        // style must be an object (JSX).
+        const style = { color: `hsl(${this.state.hue}, 100%, 50%)` };
+        const result = <div className="hello" style={style}>&nbsp;{this.props.text.substring(0, this.state.length)}</div>;
         return result;
     }
 
