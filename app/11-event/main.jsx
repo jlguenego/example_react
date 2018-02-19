@@ -9,10 +9,11 @@ class Switch extends React.Component {
         this.state = {
             on: props.init === 'on',
         };
-        this.handleClick = this.handleClick.bind(this);
+        // Must be done explicitely when using this method as an event.
+        // this.handleClick = this.handleClick.bind(this);
     }
 
-    handleClick() {
+    handleClick = () => {
         console.log('handleClick', this);
         this.setState((prevState, props) => ({
             on: !prevState.on
@@ -20,7 +21,7 @@ class Switch extends React.Component {
     }
 
     render() {
-        const label = this.state.on ? "On" : "Off";
+        const label = this.state.on ? "ON" : "OFF";
         return <button onClick={this.handleClick}>{label}</button>;
     }
 
