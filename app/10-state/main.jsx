@@ -7,7 +7,6 @@ class ProgressiveWrite extends React.Component {
     constructor(props) {
         super(props);
         console.log('instantiate component');
-        // state is a React API keyword.
         this.state = {
             length: 0
         };
@@ -29,6 +28,7 @@ class ProgressiveWrite extends React.Component {
     }
 
     tick() {
+        // never access to this.state !
         this.setState((prevState, props) => {
             let length = prevState.length;
             length++;
