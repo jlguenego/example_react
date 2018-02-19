@@ -22,8 +22,9 @@
     <section>
       <h2>Notes</h2>
       <ul>
-        <li>2 notations for Components: ES5 (function) and ES6 (class extending
-          <code>React.Component</code>)</li>
+        <li>In the constructor, specify at least <code>this.state = {};</code></li>
+        <li>In the constructor, do not use <code>this.setState();</code></li>
+        <li>In the <code>componentDidMount()</code> and <code>componentWillUnmount()</code> callbacks, please use <code>this.setState()</code> instead of <code>this.state</code></li>
       </ul>
     </section>
   </main>
