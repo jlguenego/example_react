@@ -49,11 +49,14 @@ ul {
 }
 
 .hello {
-    display: inline-block;
+    display: block;
+    width: 50%;
     padding: 3rem;
     font-size: 2em;
     background-color: hsl(0, 100%, 90%);
+    border: 1px solid hsl(0, 100%, 80%);
     color: hsl(240, 100%, 80%);
     animation: fadein 3s;
+    margin-bottom: 1em;
 }
 

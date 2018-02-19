@@ -3,7 +3,9 @@ function time() {
 }
 
 
-
+// Only the diff will be modified in the DOM.
+// The DOM will not be naively rewritten.
+// This is the advantage of Virtual DOM.
 setInterval(() => {
     console.log('tick');
     const element = (
