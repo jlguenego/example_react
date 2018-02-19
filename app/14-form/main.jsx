@@ -8,7 +8,7 @@ class LoginForm extends React.Component {
         super(props);
         this.state = {
             login: 'kiki',
-            password: '123',
+            password: '',
         };
     }
 
@@ -32,15 +32,15 @@ class LoginForm extends React.Component {
         return (
             <div>
                 <form onSubmit={this.onSubmit.bind(this)}>
-                    <label>Login:
+                    <label><span>Login:</span>
                     <input name="login" onChange={this.onLoginChange.bind(this)} defaultValue={this.state.login} />
                     </label>
-                    <label>Password:
-                    <input name="login" type="password" onChange={this.onPasswordChange.bind(this)} />
+                    <label><span>Password:</span>
+                    <input name="password" type="password" onChange={this.onPasswordChange.bind(this)} defaultValue={this.state.password} />
                     </label>
-                    <button>Submit</button>
+                    <label><span>&nbsp;</span><button>Submit</button></label>
                 </form>
-                <span style={{ fontWeight: 'bold'}}>{this.state.login}</span>
+                <span style={{ fontWeight: 'bold'}}>{JSON.stringify(this.state)}</span>
             </div>
         )
     }

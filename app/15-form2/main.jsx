@@ -30,15 +30,16 @@ class MyForm extends React.Component {
         return (
             <div>
                 <form onSubmit={this.onSubmit.bind(this)}>
-                    <label>Level:
+                    <label><span>Level:</span>
                         <select name="level" onChange={this.onChange.bind(this)} value={this.state.level}>
                             {list}
                         </select>
                     </label>
-                    <label>Comment:
+                    <label><span>Comment:</span>
                         <textarea name="comment" type="password" onChange={this.onChange.bind(this)} value={this.state.comment} />
                     </label>
-                    <button>Submit</button>
+                    <label><span>&nbsp;</span><button>Submit</button></label>
+                    
                 </form>
                 <span>{JSON.stringify(this.state)}</span>
             </div>
