@@ -14,6 +14,7 @@ class LoginForm extends React.Component {
 
     onSubmit(event) {
         console.log('onSubmit', this);
+        // in order to not let the browser go to another page.
         event.preventDefault();
     }
 
@@ -34,7 +35,7 @@ class LoginForm extends React.Component {
                     <input name="login" onInput={this.onLoginChange.bind(this)} defaultValue={this.state.login} />
                 </label>
                 <label>Password:
-                    <input name="login" type="password" onInput={this.onPasswordChange.bind(this)} defaultValue={this.state.password} />
+                    <input name="login" type="password" onInput={this.onPasswordChange.bind(this)} />
                 </label>
                 <button>Submit</button>
             </form>
