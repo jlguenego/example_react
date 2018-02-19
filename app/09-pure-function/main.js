@@ -16,3 +16,4 @@ console.log('Exemple of impure function');
 total(object, 3);
 total(object, 4);
 
+
