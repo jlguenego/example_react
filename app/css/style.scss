@@ -20,17 +20,7 @@ label {
     margin-bottom: 1em;
 }
 
-label {
-    display: block;
-    font-weight: bold;
-    span {
-        display: inline-block;
-        text-align: right;
-        padding-right: 1em;
-        vertical-align: top;
-        width: 10em;
-    }
-}
+
 
 h1 {
     font-size: 2em;
@@ -55,7 +45,24 @@ button {
 
 form {
     display: block;
-    border: 1px solid black;
+    padding: 1em;
+    background: #eee;
+    margin-bottom: 1em;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    span {
+        display: inline-block;
+        text-align: right;
+        padding-right: 1em;
+        vertical-align: top;
+        width: 10em;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 @keyframes left {
