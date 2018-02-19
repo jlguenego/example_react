@@ -37,6 +37,9 @@ button {
     margin-right: 1em;
     padding: 1em;
     background: gray(77%);
+    &:hover {
+        background: gray(44%);
+    }
 }
 
 @keyframes left {
