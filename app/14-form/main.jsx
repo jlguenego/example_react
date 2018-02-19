@@ -6,6 +6,10 @@ import '../css/style.scss';
 class LoginForm extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            login: 'kiki',
+            password: '123',
+        };
     }
 
     onSubmit(event) {
@@ -13,22 +17,24 @@ class LoginForm extends React.Component {
         event.preventDefault();
     }
 
-    onLoginInput() {
-        console.log('onLoginInput');
+    onLoginChange(event) {
+        console.log('onLoginChange', event);
+        this.setState({login: event.target.value});
     }
 
-    onPasswordInput() {
-        console.log('onPasswordInput');
+    onPasswordChange(event) {
+        console.log('onPasswordChange', event);
+        this.setState({password: event.target.value});
     }
 
     render() {
         return (
             <form onSubmit={this.onSubmit.bind(this)}>
                 <label>Login:
-                    <input name="login" onInput={this.onLoginInput.bind(this)} />
+                    <input name="login" onInput={this.onLoginChange.bind(this)} defaultValue={this.state.login} />
                 </label>
                 <label>Password:
-                    <input name="login" type="password" onInput={this.onPasswordInput.bind(this)} />
+                    <input name="login" type="password" onInput={this.onPasswordChange.bind(this)} defaultValue={this.state.password} />
                 </label>
                 <button>Submit</button>
             </form>
