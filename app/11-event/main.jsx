@@ -22,7 +22,8 @@ class Switch extends React.Component {
 
     render() {
         const label = this.state.on ? "ON" : "OFF";
-        return <button onClick={this.handleClick}>{label}</button>;
+        // return <button onClick={this.handleClick}>{label}</button>;
+        return <button onClick={(e) => this.handleClick(e)}>{label}</button>;
     }
 
 }
