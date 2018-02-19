@@ -29,14 +29,15 @@ class ProgressiveWrite extends React.Component {
     }
 
     tick() {
-        console.log('tick');
-        let length = this.state.length;
-        length++;
-        if (length > this.props.text.length) {
-            length = 0;
-        }
-        this.setState({
-            length: length
+        this.setState((prevState, props) => {
+            let length = prevState.length;
+            length++;
+            if (length > props.text.length) {
+                length = 0;
+            }
+            return {
+                length: length
+            };
         });
     }
 
@@ -45,7 +46,6 @@ class ProgressiveWrite extends React.Component {
     // Or when the props change.
     render() {
         const result = <div className="hello">&nbsp;{this.props.text.substring(0, this.state.length)}</div>;
-        console.log('result', result);
         return result;
     }
 
@@ -55,16 +55,16 @@ let name = "Jean-Louis";
 
 // document.addEventListener('DOMContentLoaded', load);
 
-window.load = function() {
+window.load = function () {
     // the name value is a snapshot.
     ReactDOM.render(<ProgressiveWrite text={name} />, document.getElementById('root'));
 }
 
-window.unload = function() {
+window.unload = function () {
     ReactDOM.render(undefined, document.getElementById('root'));
 }
 
-window.setText = function() {
+window.setText = function () {
     name = 'Dany';
 }
 
