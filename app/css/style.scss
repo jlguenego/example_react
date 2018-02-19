@@ -46,11 +46,16 @@ ul {
 button {
     border: 1px solid black;
     margin-right: 1em;
-    padding: 1em;
+    padding: 0.5em 1em;
     background: gray(77%);
     &:hover {
         background: gray(66%);
     }
+}
+
+form {
+    display: block;
+    border: 1px solid black;
 }
 
 @keyframes left {
