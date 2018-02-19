@@ -46,8 +46,6 @@ class LoginForm extends React.Component {
     }
 }
 
-const array = [1, 2, 3, 5, 8, 1];
-
 document.addEventListener('DOMContentLoaded', () => {
     ReactDOM.render(<LoginForm />, document.getElementById('root'));
 });
