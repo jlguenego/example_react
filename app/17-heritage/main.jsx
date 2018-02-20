@@ -3,13 +3,16 @@ import ReactDOM from 'react-dom';
 
 import '../css/style.scss';
 
-import { StarInput } from '../16-lifting-state/StarInput.jsx';
+import { Star2Input } from './Star2Input.jsx';
+
+
 
 class App extends React.Component {
     constructor() {
         super();
         this.state = {
-            appNote: 4
+            appNote: 4,
+            total: 10,
         };
     }
     onChange(n) {
@@ -19,11 +22,11 @@ class App extends React.Component {
     render() {
         const result = (
             <div>
-                Star without default note: <StarInput />
+                Star without default note: <Star2Input total={this.state.total}/>
                 Star with appNote = {this.state.appNote}: 
-                <StarInput note={this.state.appNote} onChange={this.onChange.bind(this)} />
+                <Star2Input note={this.state.appNote} total={this.state.total} onChange={this.onChange.bind(this)} />
                 Star with appNote = {this.state.appNote}: 
-                <StarInput note={this.state.appNote} onChange={this.onChange.bind(this)} />
+                <Star2Input note={this.state.appNote} total={this.state.total} onChange={this.onChange.bind(this)} />
             </div>
         );
         return result;

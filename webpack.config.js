@@ -7,6 +7,9 @@ module.exports = {
 	output: {
 		filename: '[name].js',
 	},
+	resolve: {
+		extensions: ['.js', '.json', '.jsx']
+	},
 	module: {
 		rules: [{
 			test: /\.(js|jsx)$/,
