@@ -6,9 +6,6 @@ import { StarInput } from '../16-lifting-state/StarInput';
 const imgDir = '../16-lifting-state/img';
 
 export class Star2Input extends StarInput {
-    constructor(props) {
-        super(props);
-    }
 
     componentWillReceiveProps(props) {
         if (!'note' in props) {
