@@ -20,8 +20,10 @@ class App extends React.Component {
         const result = (
             <div>
                 Star without default note: <StarInput />
-                Star with appNote = {this.state.appNote}: <StarInput note={this.state.appNote} onChange={this.onChange.bind(this)} />
-                Star with appNote = {this.state.appNote}: <StarInput note={this.state.appNote} onChange={this.onChange.bind(this)} />
+                Star with appNote = {this.state.appNote}: 
+                <StarInput note={this.state.appNote} onChange={this.onChange.bind(this)} />
+                Star with appNote = {this.state.appNote}: 
+                <StarInput note={this.state.appNote} onChange={this.onChange.bind(this)} />
             </div>
         );
         return result;
