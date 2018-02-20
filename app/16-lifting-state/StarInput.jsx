@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+const imgDir = '../16-lifting-state/img';
+
 export class StarInput extends React.Component {
     constructor(props) {
         super(props);
@@ -37,15 +39,16 @@ export class StarInput extends React.Component {
 
     render() {
         const starList = [1, 2, 3, 4, 5].map(n => {
-            let src = 'img/gray_star.png';
+            let src = 'gray_star.png';
             if (!isNaN(this.state.note)) {
                 if (n <= this.state.note) {
-                    src = 'img/yellow_star.png';
+                    src = 'yellow_star.png';
 
                 } else {
-                    src = 'img/white_star.png';
+                    src = 'white_star.png';
                 }
             }
+            src = imgDir + '/' + src;
             return <img onClick={this.onClick.bind(this, n)} key={n} src={src} style={{ cursor: 'pointer' }} />;
         });
 
