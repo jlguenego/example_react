@@ -2,14 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import { StarInput } from '../16-lifting-state/StarInput';
-
-const imgDir = '../16-lifting-state/img';
+import { Frame } from './Frame';
 
 export function Movie(props) {
     return (
-        <div style={{ border: '1px solid black' }}>
+        <Frame>
             {props.title} - {props.year} <StarInput note={props.note} />
-        </div>
+        </Frame>
     )
 }
 
