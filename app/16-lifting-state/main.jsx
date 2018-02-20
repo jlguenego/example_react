@@ -5,7 +5,6 @@ import '../css/style.scss';
 
 class StarInput extends React.Component {
     constructor(props) {
-        console.log('StarInput constructor');
         super(props);
         this.state = {
             note: 3,
@@ -14,7 +13,6 @@ class StarInput extends React.Component {
     }
 
     componentWillReceiveProps(props) {
-        console.log('new props', props)
         if (!'note' in props) {
             return;
         }
@@ -26,12 +24,10 @@ class StarInput extends React.Component {
         } else {
             this.state.note = +props.note;
         }
-        console.log('this.state', this.state);
     }
 
     onClick(n, e) {
         e.preventDefault();
-        console.log('onClick', n, e, this);
         const state = {
             note: n,
         };
@@ -42,7 +38,6 @@ class StarInput extends React.Component {
     }
 
     render() {
-        console.log('StarInput render', this.state);
         const starList = [1, 2, 3, 4, 5].map(n => {
             let src = 'img/gray_star.png';
             if (!isNaN(this.state.note)) {
@@ -59,7 +54,6 @@ class StarInput extends React.Component {
         return (
             <div>
                 {starList}
-                {JSON.stringify(this.state)}
             </div>
         )
     }
@@ -73,21 +67,17 @@ class App extends React.Component {
         };
     }
     onChange(n) {
-        console.log('onChange', n, this);
         this.setState({ appNote: +n });
     }
 
     render() {
-        console.log('app render', this.state);
         const result = (
             <div>
-                <StarInput />
-                <StarInput note={this.state.appNote} onChange={this.onChange.bind(this)} />
-                <StarInput note={this.state.appNote} onChange={this.onChange.bind(this)} />
-                {JSON.stringify(this.state)}
+                Star without default note: <StarInput />
+                Star with appNote = {this.state.appNote}: <StarInput note={this.state.appNote} onChange={this.onChange.bind(this)} />
+                Star with appNote = {this.state.appNote}: <StarInput note={this.state.appNote} onChange={this.onChange.bind(this)} />
             </div>
         );
-        console.log('result', result);
         return result;
     }
 }
