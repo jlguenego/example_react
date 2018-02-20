@@ -16,8 +16,8 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <Movie title="Star wars" year="2017" note="3" />
-                <Movie title="The Avengers" year="2015" note="2" />
+                <Movie title="Star wars" year={2017} note={3} />
+                <Movie title="The Avengers" year={2015} note={2} />
             </div>
         );
     }
