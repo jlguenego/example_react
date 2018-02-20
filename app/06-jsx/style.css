@@ -1,0 +1,6 @@
+.jsx div {
+    min-height: 1em;
+    background: #eee;
+    border: 1px solid black;
+    margin-bottom: 1em;
+}

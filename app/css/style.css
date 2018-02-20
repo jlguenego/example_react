@@ -28,7 +28,7 @@ h1 {
     animation: left 500ms;
 }
 
-ul {
+ul, ol {
     padding: 1em;
 }
 

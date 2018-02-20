@@ -8,20 +8,42 @@
   <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
   <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="jsx">
   <main>
     <h1>JSX</h1>
     <p>Please open the console with <code>F12</code></p>
-    <div id="root"></div>
+    <div id="root1"></div>
+    <div id="root2"></div>
+    <div id="root3"></div>
+    <div id="root4"></div>
+    <div id="root5"></div>
+    <div id="root6"></div>
+    <div id="root7"></div>
+    <div id="root8"></div>
+    <div id="root9"></div>
+    <div id="root10"></div>
     <section>
       <h2>Notes</h2>
       <ul>
         <li>Be sure to run the Chrome browser with options <code>--allow-file-access-from-files</code></li>
         <li>JSX create React.createElement() javascript code.</li>
-        
       </ul>
+      <h2>Rules in JSX.</h2>
+      <ol>
+        <li>Do not render unknown element.</li>
+        <li>Do not render an element starting with uppercase. It will be considered as React component.</li>
+        <li>Do not use attribute <code>class</code>, use <code>className</code> instead.</li>
+        <li>Better should use parenthesis for wrapping multiline JSX. Avoid automatic column insertion problems.</li>
+        <li>Always use an enclosing tag, at least a <code>React.Fragment</code></li>
+        <li>Javascript expression can be used inside TextElement.</li>
+        <li>Javascript expression can be used inside attribute.</li>
+        <li>Self closing tag are permitted.</li>
+        <li>Dot notation for element is permitted, but not [] notation.</li>
+        <li>Spread attribute</li>
+      </ol>
     </section>
   </main>
   <script src="main.jsx" type="text/babel"></script>
