@@ -17,7 +17,7 @@
         set world(value) {
             console.log('try to set something to the world...', value);
             this.hiddenWorld = value;
-            return this.$$hiddenWorld
+            return 'now it is ' + this.hiddenWorld;
         }
     }
 
@@ -31,6 +31,7 @@
 
     console.log('hello.world', hello.world);
     hello.world = 'foo';
+    console.log(`hello.world = 'bar';`, hello.world = 'bar');
 
 })();
 
