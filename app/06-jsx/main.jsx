@@ -9,7 +9,7 @@ ReactDOM.render(
 // console.log('e2', e2);
 
 //3) Do not use attribute 'class', use 'className' instead. (warning)
-const e3 = <h1 titi="tata" class="hello" />;
+const e3 = <h1 titi="tata" class="hello" >Hello</h1>;
 console.log('e3', e3);
 // raise a warning.
 ReactDOM.render(
@@ -19,7 +19,7 @@ ReactDOM.render(
 // this is ok
 const e4 =
     <div className="hello">
-        Coucou !!!
+        Coucou !
 </div>
     ;
 console.log('e4', e4);
@@ -32,7 +32,7 @@ ReactDOM.render(
 function getE4_1() {
     return
     <div className="hello">
-        Coucou !!!
+        Coucou !
 </div>
         ;
 }
@@ -41,7 +41,7 @@ console.log('e4.1', getE4_1());
 function getE4_2() {
     return (
         <div className="hello">
-            Coucou !!!
+            Coucou !
 </div>)
         ;
 }
