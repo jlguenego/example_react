@@ -4,6 +4,31 @@ header {
     background: $primaryColor;
 }
 
-jumbo {
+.menu-item {
+    text-decoration: none;
+    color: black;
+    &.active {
+        background: gray(90%);
+    }
+}
+
+.jumbo {
     background: $primaryColor;
+}
+
+button, .button {
+    text-decoration: none;
+    color: $secondaryColor;
+    background: hsl(356, 93%, 39%);
+}
+
+footer {
+    color: $secondaryColor;
+    background: gray(50%);
+    a {
+        color: $secondaryColor;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
 }

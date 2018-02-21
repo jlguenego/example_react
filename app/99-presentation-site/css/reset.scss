@@ -25,6 +25,11 @@ body {
     overflow-x: hidden;
 }
 
+
+p {
+    margin-bottom: 1em;
+}
+
 @keyframes fadein {
     from {
         opacity: 0;
