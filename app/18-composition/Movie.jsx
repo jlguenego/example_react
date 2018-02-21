@@ -14,6 +14,8 @@ export function Movie(props) {
     )
 }
 
+// use propType to check the properties used for the component.
+
 Movie.propTypes = {
     title: PropTypes.string,
     year: PropTypes.number,
