@@ -1,7 +1,12 @@
 @import './variable.scss';
-
 header {
     background: $primaryColor;
+}
+
+.site-id {
+    a {
+        text-decoration: none;
+    }
 }
 
 .menu-item {
@@ -12,11 +17,8 @@ header {
     }
 }
 
-.jumbo {
-    background: $primaryColor;
-}
-
-button, .button {
+button,
+.button {
     text-decoration: none;
     color: $secondaryColor;
     background: hsl(356, 93%, 39%);
@@ -31,4 +33,8 @@ footer {
             opacity: 0.8;
         }
     }
+}
+
+.facebook {
+    background: hsl(207, 85%, 37%);
 }
