@@ -36,6 +36,7 @@ menu {
 }
 
 button, .button {
+    display: inline-block;
     padding: 0.5em 1em;
     border: none;
     &:hover {
@@ -54,11 +55,17 @@ button, .button {
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        p {
+        p.buttons {
+            line-height: 2em;
             text-align: center;
             button, .button {
+                line-height: normal;
                 font-size: 0.8em;
+                width: 11em;
             }
+        }
+        .tagline {
+            text-align: center;
         }
     }
 }

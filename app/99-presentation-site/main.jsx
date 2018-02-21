@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import 'normalize.css';
+import 'font-awesome/css/font-awesome.css';
 import './css/reset.scss';
 import './css/layout.scss';
 import './css/grid.scss';

@@ -1,4 +1,5 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require('path');
 
 module.exports = {
 	entry: {
@@ -21,7 +22,19 @@ module.exports = {
 			test: /\.css$/,
 			use: ExtractTextPlugin.extract({
 				fallback: 'style-loader',
-				use: 'css-loader?minimize&sourceMap'
+				use: [{
+					loader: 'css-loader',
+					options: {
+						minimize: true,
+						sourceMap: true,
+						root: './wpk'
+					}
+				}, {
+					loader: 'postcss-loader',
+					options: {
+						sourceMap: true,
+					}
+				}]
 			})
 		}, {
 			test: /\.scss$/,
@@ -30,18 +43,19 @@ module.exports = {
 				use: [{
 					loader: 'css-loader',
 					options: {
-						minimize: true,
-						sourceMap: true
+						minimize: false,
+						sourceMap: true,
+						// root: '../img'
 					}
 				}, {
 					loader: 'postcss-loader',
 					options: {
-						sourceMap: true
+						sourceMap: true,
 					}
 				}, {
 					loader: 'sass-loader',
 					options: {
-						sourceMap: true
+						sourceMap: true,
 					}
 				}]
 			})
@@ -54,12 +68,74 @@ module.exports = {
 				}
 			}],
 		}, {
-			test: /\.(jpg|png|woff|woff2|ttf|eot|svg)([\?]?.*)$/,
+			// svg included in HTML files
+			test: /img.html.*\.svg$/,
+			use: [{
+				loader: 'url-loader',
+				options: {
+					name: '[name].[ext]',
+					limit: 10000,
+					mimetype: 'image/svg+xml',
+					publicPath: './wpk/'
+				}
+			}]
+		}, {
+			// svg included in CSS files (at least one of the test condition must match)
+			test: [/img.css.*\.svg$/, /(fontawesome-webfont|glyphicons-halflings-regular)\.svg(\?v=\d+\.\d+\.\d+)?$/],
+			use: [{
+				loader: 'url-loader',
+				options: {
+					name: '[name].[ext]',
+					limit: 10000,
+					mimetype: 'image/svg+xml',
+				}
+			}]
+		}, {
+			test: /\.(png|jpg)$/,
+			exclude: /sprite.png$/,
 			use: [{
 				loader: 'file-loader',
 				options: {
-					name: '[path][name].[ext]',
-					publicPath: './wpk/'
+					name: '[name].[ext]',
+					publicPath: './wpk/',
+				}
+			}]
+		}, {
+			test: /sprite.png$/,
+			use: [{
+				loader: 'file-loader',
+				options: {
+					name: 'sprite.jpg',
+				}
+			}, {
+				loader: path.resolve(__dirname, './utils/png2jpg-loader.js'),
+			}]
+		}, {
+			test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
+			use: [{
+				loader: 'url-loader',
+				options: {
+					name: '[name].[ext]',
+					limit: 10000,
+					mimetype: 'application/font-woff'
+				}
+			}]
+		}, {
+			test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+			use: [{
+				loader: 'url-loader',
+				options: {
+					name: '[name].[ext]',
+					limit: 10000,
+					mimetype: 'application/octet-stream'
+				}
+			}]
+		}, {
+			test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+			use: [{
+				loader: 'file-loader',
+				options: {
+					name: '[name].[ext]',
 				}
 			}]
 		}]
