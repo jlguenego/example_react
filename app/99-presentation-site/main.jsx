@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import 'normalize.css';
 import './css/reset.scss';
 import './css/layout.scss';
+import './css/grid.scss';
 import './css/theme.scss';
 
 import { Header } from './jlg-layout/Header';
