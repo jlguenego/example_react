@@ -15,6 +15,11 @@ function sleep(time) {
 
 class App extends React.Component {
 
+    constructor(props) {
+        super(props);
+        console.log('constructor', this.props);
+    }
+
     componentWillMount() {
         console.log('componentWillMount', this.props.id);
     }
@@ -22,6 +27,7 @@ class App extends React.Component {
     componentDidMount() {
         console.log('componentDidMount', this.props.id);
     }
+    
     componentWillUnmount() {
         console.log('componentWillUnmount', this.props.id);
     }
