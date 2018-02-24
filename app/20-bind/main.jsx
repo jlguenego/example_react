@@ -20,7 +20,7 @@ class App extends React.Component {
     render() {
         return (
             <React.Fragment>
-                <button onClick={this.handleClick.bind(this)}>Click me!</button>
+                <button onClick={::this.handleClick}>Click me!</button>
                 <span>{this.state.message}</span>
             </React.Fragment>
         );
