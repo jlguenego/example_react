@@ -4,6 +4,7 @@ function Hello1(props) {
     return <div className="hello">Hello {props.name}</div>;
 }
 
+// React functional component (arrow notation).
 const Hello1a = (props) => <div className="hello">Hello hello {props.name}</div>;
 
 ReactDOM.render(<Hello1 name="Jean-Louis" />, document.getElementById('root'));
