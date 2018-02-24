@@ -4,6 +4,8 @@ function Hello1(props) {
     return <div className="hello">Hello {props.name}</div>;
 }
 
+const Hello1a = (props) => <div className="hello">Hello hello {props.name}</div>;
+
 ReactDOM.render(<Hello1 name="Jean-Louis" />, document.getElementById('root'));
 
 // React class component.
@@ -21,6 +23,7 @@ ReactDOM.render(<Hello2 name="Dany" />, document.getElementById('other-root'));
 function MyConponent(props) {
     return (<div>
         <Hello1 name="Alice" />
+        <Hello1a name="Anna" />
         <Hello2 name="Bob" />
     </div>);
 }
