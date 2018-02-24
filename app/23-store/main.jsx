@@ -19,19 +19,19 @@ class App extends React.Component {
 
     constructor(props) {
         super(props);
-        this.state = { store: this.props.store };
+        this.state = {};
     }
 
     increment() {
         this.props.store.incrementNumber();
-        this.setState({ store: this.props.store });
+        this.setState({});
     }
-    
+
     render() {
         console.log('render');
         return (<div>
             <button onClick={this.increment.bind(this)}>Increment</button>
-            {JSON.stringify(this.state.store)}
+            {JSON.stringify(this.props.store)}
         </div>);
     }
 }
