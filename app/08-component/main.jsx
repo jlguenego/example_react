@@ -1,27 +1,27 @@
 
-//ES5 way to run react component.
-function Hello(props) {
+// React functional component.
+function Hello1(props) {
     return <div className="hello">Hello {props.name}</div>;
 }
 
-ReactDOM.render(<Hello name="Jean-Louis" />, document.getElementById('root'));
+ReactDOM.render(<Hello1 name="Jean-Louis" />, document.getElementById('root'));
 
-//ES6 way to run react component.
-class HelloAgain extends React.Component {
+// React class component.
+class Hello2 extends React.Component {
 
     render() {
         return <div className="hello">Hello again {this.props.name}</div>;
     }
 }
 
-ReactDOM.render(<HelloAgain name="Dany" />, document.getElementById('other-root'));
+ReactDOM.render(<Hello2 name="Dany" />, document.getElementById('other-root'));
 
 
-//A component can call other components.
+// A component can call other components.
 function MyConponent(props) {
     return (<div>
-        <Hello name="Alice" />
-        <Hello name="Bob" />
+        <Hello1 name="Alice" />
+        <Hello2 name="Bob" />
     </div>);
 }
 
