@@ -11,7 +11,7 @@ class Switch extends React.Component {
         };
         // Method used for event MUST BE BOUND EXPLICITELY to this.
         // 3 ways to do it: A1 A2 A3
-        // A1: call the method bind(this)
+        // A1: call the method bind(this) on an attribute (own property)
         // this.handleClick = this.handleClick.bind(this);
     }
 
@@ -27,7 +27,7 @@ class Switch extends React.Component {
     render() {
         const label = this.state.on ? "ON" : "OFF";
         // return <button onClick={this.handleClick}>{label}</button>;
-        // A3: use an arrow function here (my prefered)
+        // A3: use an arrow function here
         return <button onClick={(e) => this.handleClick()}>{label}</button>;
     }
 
