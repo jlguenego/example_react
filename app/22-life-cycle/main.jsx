@@ -27,9 +27,21 @@ class App extends React.Component {
     componentDidMount() {
         console.log('componentDidMount', this.props.id);
     }
-    
+
     componentWillUnmount() {
         console.log('componentWillUnmount', this.props.id);
+    }
+
+    componentWillReceiveProps() {
+        console.log('componentWillReceiveProps', this.props);
+    }
+
+    componentWillUpdate() {
+        console.log('componentWillUpdate', this.props);
+    }
+    
+    componentDidUpdate() {
+        console.log('componentDidUpdate', this.props);
     }
     
     render() {
