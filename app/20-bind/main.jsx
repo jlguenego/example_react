@@ -18,11 +18,14 @@ class App extends React.Component {
     }
 
     render() {
+        // <> is <React.Fragment> in short syntax.
+        // :: is bind syntax (TC39 bind operator)
+        // On Feb 2018, VSCode is not ready for checking this new JS syntax :(
         return (
-            <React.Fragment>
+            <>
                 <button onClick={::this.handleClick}>Click me!</button>
                 <span>{this.state.message}</span>
-            </React.Fragment>
+            </>
         );
     }
 }
