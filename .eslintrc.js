@@ -1,5 +1,9 @@
 module.exports = {
-	extends: ['plugin:react/recommended', 'eslint:recommended', 'class-property'],
+	extends: [
+		'eslint:recommended',
+		'plugin:class-property',
+		'plugin:react/recommended',
+	],
 	parserOptions: {
 		ecmaVersion: 8,
 		sourceType: 'module',
@@ -24,6 +28,5 @@ module.exports = {
 		node: true,
 		jasmine: true,
 	},
-	globals: {
-	}
+	globals: {}
 };
