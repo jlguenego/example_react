@@ -21,7 +21,6 @@
     console.log('o1 === o2', o1 === o2);
     console.log('o1 === o3', o1 === o3);
 
-
     // Observables since ES5.1
     const hello = {
         get world() {

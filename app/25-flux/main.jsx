@@ -22,7 +22,8 @@ class MyStore extends ReduceStore {
             case 'increment':
                 // it is required to send a brand new state. Not the existing one.
                 // we call that an immutable object.
-                return { number: state.number + 1 };
+                state.number++;
+                return { ...state };
             case 'add':
                 return { number: state.number + action.n };
 
@@ -68,4 +69,4 @@ setInterval(() => {
         type: 'add',
         n: -1
     });
-}, 1000);
+}, 5000);

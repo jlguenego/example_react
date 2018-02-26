@@ -1,9 +1,5 @@
-import 'babel-polyfill';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-import {Record} from 'immutable';
 
 import '../css/style.scss';
 
