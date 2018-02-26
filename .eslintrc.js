@@ -1,12 +1,18 @@
 module.exports = {
 	extends: [
 		'eslint:recommended',
-		'plugin:class-property',
 		'plugin:react/recommended',
+	],
+	plugins: [
+		'class-property',
+		'react',
 	],
 	parserOptions: {
 		ecmaVersion: 8,
 		sourceType: 'module',
+		ecmaFeatures: {
+			jsx: true
+		}
 	},
 	rules: {
 		'react/prop-types': 0,

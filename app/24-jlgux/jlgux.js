@@ -1,18 +1,19 @@
 import React from 'react';
 
 export class StoreManager {
+    
     constructor(store, transitions = [], getters = []) {
         console.log('StoreManager', store, transitions);
-        this.store = store;
+        this.$$store = store;
         transitions.forEach(transition => {
             this[transition] = (...args) => {
-                this.store[transition].apply(this.store, args);
+                this.$$store[transition].apply(this.$$store, args);
                 this.$$getContainer().setState(this);
             };
         });
         getters.forEach(getter => {
             this[getter] = (...args) => {
-                return this.store[getter].apply(this.store, args);
+                return this.$$store[getter].apply(this.$$store, args);
             };
         });
     }

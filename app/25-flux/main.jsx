@@ -1,41 +1,53 @@
-import 'babel-polyfill';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import {Record} from 'immutable';
+import { Dispatcher } from 'flux';
+import { Container, ReduceStore } from 'flux/utils';
 
 import '../css/style.scss';
 
-class Store extends Record({ number: 10 }) {
-    increment() {
-        console.log('increment');
-        this.set(this.get('number') + 1)
-    }
-};
+const dispatcher = new Dispatcher();
 
-
-class Container extends React.Component {
+class MyStore extends ReduceStore {
     constructor() {
-        super();
-        this.state = new Store();
-        console.log('state', this.store);
-        console.log('state.number', this.store.number);
+        super(dispatcher);
     }
 
-    render() {
-        return <App {...this.state} />;
+    getInitialState() {
+        return { number: 10 };
+    }
+
+    reduce(state, action) {
+        switch (action.type) {
+            case 'increment':
+                return { number: state.number + 1 };
+
+            default:
+                return state;
+        }
     }
 }
+
+const myStore = new MyStore();
 
 function App(props) {
     return (<div>
-        <button onClick={props.increment}>Increment</button>
-        {props.number}
+        <button onClick={props.onIncrement}>Increment</button>
+        {props.counter.number}
     </div>);
-
 }
 
-document.addEventListener('DOMContentLoaded', async () => {
-    ReactDOM.render(<Container />, document.getElementById('root'));
+const RootContainer = Container.createFunctional(App, () => [myStore], () => {
+    return {
+        counter: myStore.getState(),
+        onIncrement: () => {
+            dispatcher.dispatch({
+                type: 'increment',
+            });
+        },
+    }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    ReactDOM.render(<RootContainer />, document.getElementById('root'));
 });

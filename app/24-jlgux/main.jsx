@@ -24,3 +24,7 @@ const Container = createContainer(App, storeManager);
 document.addEventListener('DOMContentLoaded', () => {
     ReactDOM.render(<Container />, document.getElementById('root'));
 });
+
+setInterval(() => {
+    storeManager.add(-1);
+}, 1000);
