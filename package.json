@@ -16,6 +16,7 @@
     "@babel/preset-env": "^7.0.0-beta.40",
     "@babel/preset-react": "^7.0.0-beta.40",
     "@babel/standalone": "^7.0.0-beta.40",
+    "babel-eslint": "^8.2.2",
     "babel-loader": "^8.0.0-beta.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "babel-plugin-transform-function-bind": "^6.22.0",

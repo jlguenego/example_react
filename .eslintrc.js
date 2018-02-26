@@ -4,17 +4,19 @@ module.exports = {
 		'plugin:react/recommended',
 	],
 	plugins: [
-		'class-property',
+		// 'class-property',
 		'react',
 	],
-	parserOptions: {
-		ecmaVersion: 8,
-		sourceType: 'module',
-		ecmaFeatures: {
-			jsx: true
-		}
-	},
+	parser: 'babel-eslint',
+	// parserOptions: {
+	// 	ecmaVersion: 8,
+	// 	sourceType: 'module',
+	// 	ecmaFeatures: {
+	// 		jsx: true
+	// 	}
+	// },
 	rules: {
+		strict: 0,
 		'react/prop-types': 0,
 		'no-var': 0,
 		'no-console': 0,

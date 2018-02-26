@@ -56,7 +56,7 @@ const RootContainer = Container.createFunctional(App, () => [myStore], () => {
                 n
             });
         },
-    }
+    };
 });
 
 document.addEventListener('DOMContentLoaded', () => {

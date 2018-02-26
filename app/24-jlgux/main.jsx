@@ -9,8 +9,8 @@ import {Counter} from './business';
 
 function App(props) {
     return (<div>
-        <button onClick={props.increment.bind(props)}>Increment</button>
-        <button onClick={props.add.bind(props, 2)}>add 2</button>
+        <button onClick={props.increment}>Increment</button>
+        <button onClick={() => props.add(2)}>add 2</button>
         {props.getNumber()}
     </div>);
 }
