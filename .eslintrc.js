@@ -1,10 +1,11 @@
 module.exports = {
-	extends: ['plugin:react/recommended', 'eslint:recommended'],
+	extends: ['plugin:react/recommended', 'eslint:recommended', 'class-property'],
 	parserOptions: {
 		ecmaVersion: 8,
 		sourceType: 'module',
 	},
 	rules: {
+		'react/prop-types': 0,
 		'no-var': 0,
 		'no-console': 0,
 		'prefer-rest-params': 0,
@@ -24,18 +25,5 @@ module.exports = {
 		jasmine: true,
 	},
 	globals: {
-		jQuery: true,
-		$: true,
-		angular: true,
-		inject: true,
-		browser: true,
-		element: true,
-		by: true,
-		getJSONFixture: true,
-		FastClick: true,
-		io: true,
-		Promise: true,
-		Hashes: true,
-		THREE: true,
 	}
 };
