@@ -20,6 +20,8 @@ class MyStore extends ReduceStore {
     reduce(state, action) {
         switch (action.type) {
             case 'increment':
+                // it is required to send a brand new state. Not the existing one.
+                // we call that an immutable object.
                 return { number: state.number + 1 };
             case 'add':
                 return { number: state.number + action.n };
