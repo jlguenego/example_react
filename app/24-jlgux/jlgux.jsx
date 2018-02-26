@@ -1,24 +1,37 @@
 import React from 'react';
 
 export class StoreManager {
-    constructor(container, store, methods) {
-        console.log('StoreManager', container, store, methods);
-        this.container = container;
+    constructor(store, transitions = [], getters = []) {
+        console.log('StoreManager', store, transitions);
         this.store = store;
-        methods.forEach(method => {
-            this[method] = (...args) => {
-                this.store[method].apply(this.store, args);
-                this.container.setState(this);
+        transitions.forEach(transition => {
+            this[transition] = (...args) => {
+                this.store[transition].apply(this.store, args);
+                this.$$getContainer().setState(this);
+            };
+        });
+        getters.forEach(getter => {
+            this[getter] = (...args) => {
+                return this.store[getter].apply(this.store, args);
             };
         });
     }
+
+    $$addContainer(container) {
+        this.$$container = container;
+    }
+
+    $$getContainer(container) {
+        return this.$$container;
+    }
 }
 
-export function createContainer(view, business, methods) {
+export function createContainer(view, storeManager) {
     const Container =  class Container extends React.Component {
         constructor() {
             super();
-            this.state = new StoreManager(this, business, methods);
+            this.state = storeManager;
+            storeManager.$$addContainer(this);
             console.log('this.state', this.state);
         }
     

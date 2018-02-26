@@ -7,4 +7,12 @@ export class Counter {
     increment() {
         this.number++;
     }
+
+    add(n) {
+        this.number += n;
+    }
+
+    getNumber() {
+        return this.number;
+    }
 };
