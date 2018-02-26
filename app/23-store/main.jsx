@@ -31,7 +31,7 @@ class App extends React.Component {
         console.log('render');
         return (<div>
             <button onClick={this.increment.bind(this)}>Increment</button>
-            {JSON.stringify(this.props.store)}
+            {this.props.store.number}
         </div>);
     }
 }
