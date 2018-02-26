@@ -5,13 +5,17 @@
     console.log('Hello world');
     // Talk to the DOM.
     // Question ? What if the main.js is loaded before the DOM ?
-    document.querySelector('#title').innerHTML = 'Hello world!';
+    document.querySelector('#title').innerHTML = 'bloubloublibli';
+
+    // bind example
+    const $ = document.querySelector.bind(document);
+    $('#title').innerHTML = 'Hello world!';
 
     // Observables since ES5.1
     const hello = {
         get world() {
             console.log('try to access to the world...');
-            return this.$$hiddenWorld
+            return this.$$hiddenWorld;
         },
 
         set world(value) {
@@ -19,7 +23,7 @@
             this.hiddenWorld = value;
             return 'now it is ' + this.hiddenWorld;
         }
-    }
+    };
 
     Object.defineProperty(hello, '$$hiddenWorld', {
         value: 'coucou',
