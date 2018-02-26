@@ -1,12 +1,4 @@
 import React from 'react';
-import { Counter } from './business';
-
-function App(props) {
-    return (<div>
-        <button onClick={props.increment.bind(props)}>Increment</button>
-        {props.store.number}
-    </div>);
-}
 
 export class StoreManager {
     constructor(container, store, methods) {
@@ -22,15 +14,21 @@ export class StoreManager {
     }
 }
 
-
-export class Container extends React.Component {
-    constructor() {
-        super();
-        this.state = new StoreManager(this, new Counter(), ['increment']);
-        console.log('this.state', this.state);
-    }
-
-    render() {
-        return <App {...this.state} />;
-    }
+export function createContainer(view, business, methods) {
+    const Container =  class Container extends React.Component {
+        constructor() {
+            super();
+            this.state = new StoreManager(this, business, methods);
+            console.log('this.state', this.state);
+        }
+    
+        render() {
+            console.log('this.state', this.state);
+            return React.createElement(view, this.state);
+        }
+    };
+    return Container;
 }
+
+
+
