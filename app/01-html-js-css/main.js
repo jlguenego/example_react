@@ -11,6 +11,17 @@
     const $ = document.querySelector.bind(document);
     $('#title').innerHTML = 'Hello world!';
 
+    // spread opearator for easy immutable object.
+    const o1 = {hello: 'world'};
+    const o2 = o1;
+    const o3 = {...o1};
+    console.log('o1', o1);
+    console.log('o2', o2);
+    console.log('o3', o3);
+    console.log('o1 === o2', o1 === o2);
+    console.log('o1 === o3', o1 === o3);
+
+
     // Observables since ES5.1
     const hello = {
         get world() {
