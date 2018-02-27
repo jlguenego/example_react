@@ -75,7 +75,6 @@ unsubscribe();
 // 6) define the presentational components.
 
 function App(props) {
-    console.log('props', props);
     let input;
     let value = -1;
     const ref = n => {
@@ -108,6 +107,8 @@ const Container = connect(
     mapStateToProps,
     mapDispatchToProps
 )(App);
+
+// 8) Render with the store.
 
 document.addEventListener('DOMContentLoaded', () => {
     ReactDOM.render(<Provider store={store}>
