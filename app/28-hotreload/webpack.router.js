@@ -2,7 +2,6 @@ const webpack = require('webpack');
 const express = require('express');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
-const path = require('path');
 
 const webpackConfig = require('./webpack.config.js');
 
