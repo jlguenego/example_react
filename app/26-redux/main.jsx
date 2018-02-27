@@ -72,12 +72,7 @@ store.dispatch(add(2));
 // stop listening the actions.
 unsubscribe();
 
-// 6) use react-redux to create a container component.
-const mapStateToProps = state => ({ number: state.number });
-const mapDispatchToProps = dispatch => ({
-    increment: () => dispatch(increment()),
-    add: (n) => dispatch(add(n)),
-});
+// 6) define the presentational components.
 
 function App(props) {
     console.log('props', props);
@@ -101,14 +96,18 @@ function App(props) {
     </div>);
 }
 
+// 7) use react-redux to create a container component.
+const mapStateToProps = state => ({ number: state.number });
+const mapDispatchToProps = dispatch => ({
+    increment: () => dispatch(increment()),
+    add: (n) => dispatch(add(n)),
+});
+
 
 const Container = connect(
     mapStateToProps,
     mapDispatchToProps
 )(App);
-
-
-
 
 document.addEventListener('DOMContentLoaded', () => {
     ReactDOM.render(<Provider store={store}>
