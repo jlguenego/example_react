@@ -19,7 +19,7 @@ class MyComponent extends React.Component {
                 <div>
                     {this.state.number}
                 </div>
-                <button onClick={this.increment.bind(this)}>Incrementxx</button>
+                <button onClick={this.increment.bind(this)}>Increment</button>
             </div>
         );
     }

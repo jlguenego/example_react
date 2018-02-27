@@ -8,7 +8,7 @@ config.output.publicPath = 'http://localhost:8000/app/28-hotreload/wpk/';
 
 config.entry = {
 	bundle: [
-		'webpack-hot-middleware/client?path=http://localhost:8000/app/28-hotreload/__what',
+		'webpack-hot-middleware/client?path=./__what',
 		'./main.jsx'
 	]
 };
