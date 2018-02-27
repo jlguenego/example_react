@@ -7,12 +7,17 @@ const fs = require('fs');
 const webpackRouter = express.Router();
 
 function router(directory) {
+	console.log('directory', directory + '/webpack.router.js');
+	if (fs.existsSync(directory + '/webpack.router.js')) {
+		const router = require(directory + '/webpack.router.js');
+		return router;
+	}
 	const webpackConfig = require(directory + '/webpack.config.js');
 	webpackConfig.output.path = '/';
 	const compiler = webpack(webpackConfig);
 	// eslint-disable-next-line
 	const router = express.Router();
-	router.use('/wpk/', webpackDevMiddleware(compiler, { hot: true }));
+	router.use('/wpk/', webpackDevMiddleware(compiler, {}));
 	return router;
 };
 
