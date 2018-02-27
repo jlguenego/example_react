@@ -12,7 +12,7 @@ function router(directory) {
 	const compiler = webpack(webpackConfig);
 	// eslint-disable-next-line
 	const router = express.Router();
-	router.use('/wpk/', webpackDevMiddleware(compiler, {}));
+	router.use('/wpk/', webpackDevMiddleware(compiler, { hot: true }));
 	return router;
 };
 

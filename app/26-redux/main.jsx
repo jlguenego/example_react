@@ -119,7 +119,7 @@ const mapDispatchToProps = dispatch => ({
     saveInput: (input) => dispatch(saveInput(input)),
 });
 
-
+// note: connect is a Higher-order function
 const Container = connect(
     mapStateToProps,
     mapDispatchToProps
