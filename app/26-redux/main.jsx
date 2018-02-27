@@ -10,6 +10,7 @@ import '../css/style.scss';
 const actionType = {
     INCREMENT: 'increment',
     ADD: 'add',
+    SAVE_INPUT: 'save_input',
 };
 
 // 2) define the action creators
@@ -26,9 +27,17 @@ function add(n) {
     };
 }
 
+function saveInput(input) {
+    return {
+        type: actionType.SAVE_INPUT,
+        input
+    };
+}
+
 // 3) define the initial state
 const initialState = {
     number: 10,
+    input: -1,
 };
 
 // 4) define the reducers
@@ -44,12 +53,20 @@ function addReducer(previousState, action) {
     return newState;
 }
 
+function saveInputReducer(previousState, action) {
+    const newState = { ...previousState };
+    newState.input = action.input;
+    return newState;
+}
+
 function reducer(previousState = initialState, action) {
     switch (action.type) {
         case actionType.INCREMENT:
             return incrementReducer(previousState, action);
         case actionType.ADD:
             return addReducer(previousState, action);
+        case actionType.SAVE_INPUT:
+            return saveInputReducer(previousState, action);
         default:
             return previousState;
     }
@@ -63,11 +80,11 @@ console.log('initial state', store.getState());
 
 // Every time the state changes, log it
 // Note that subscribe() returns a function for unregistering the listener
-const unsubscribe = store.subscribe(() => console.log('current state', store.getState())
-);
+const unsubscribe = store.subscribe(() => console.log('current state', store.getState()));
 
 store.dispatch(increment());
 store.dispatch(add(2));
+store.dispatch(saveInput(1234));
 
 // stop listening the actions.
 unsubscribe();
@@ -80,7 +97,7 @@ function App(props) {
     const ref = n => {
         input = n;
         if (input) {
-            input.value = value;
+            input.value = props.input;
         }
     };
     return (<div>
@@ -90,16 +107,17 @@ function App(props) {
         <br />
         <input ref={ref} type="number" />
         <br />
-        <button onClick={() => { props.add(+input.value); }}>Add input</button>
+        <button onClick={() => { props.saveInput(+input.value); props.add(+input.value); }}>Add input</button>
 
     </div>);
 }
 
 // 7) use react-redux to create a container component.
-const mapStateToProps = state => ({ number: state.number });
+const mapStateToProps = state => ({ number: state.number, input: state.input });
 const mapDispatchToProps = dispatch => ({
     increment: () => dispatch(increment()),
     add: (n) => dispatch(add(n)),
+    saveInput: (input) => dispatch(saveInput(input)),
 });
 
 
