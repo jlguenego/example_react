@@ -93,7 +93,6 @@ unsubscribe();
 
 function App(props) {
     let input;
-    let value = -1;
     const ref = n => {
         input = n;
         if (input) {
