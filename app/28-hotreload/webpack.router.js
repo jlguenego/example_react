@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const express = require('express');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
+const path = require('path');
 
 const webpackConfig = require('./webpack.config.js');
 
@@ -10,10 +11,10 @@ const compiler = webpack(webpackConfig);
 const router = express.Router();
 router.use(webpackDevMiddleware(compiler, {
     noInfo: true, 
-    publicPath: webpackConfig.output.publicPath,
+    publicPath: '/wpk/',
 }));
 router.use(webpackHotMiddleware(compiler, {
-    // path: './'
+    // log: true,
+    path: '/__what',
 }));
 module.exports = router;
-
