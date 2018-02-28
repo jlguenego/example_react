@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import HomeView from './HomeView';
+
 import '../css/style.scss';
 
 const Header = () => <header>
@@ -15,10 +17,6 @@ const Footer = () => <footer>
         Jean-Louis GUENEGO - JLG Consulting @2001-{new Date().getFullYear()}
     </p>
 </footer>;
-
-const HomeView = () => <main>
-    Welcome Home !
-</main>;
 
 // const AboutView = () => <main>
 //     What about React ? <a href="http://reactjs.org">please check their website</a>.
