@@ -27,7 +27,7 @@ const Root = () => {
         <Header/>
         <HomeView/>
         <Footer/>
-        </React.Fragment>)
+        </React.Fragment>);
 };
 
 document.addEventListener('DOMContentLoaded', () => {

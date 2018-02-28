@@ -19,7 +19,7 @@ function router(directory) {
 	const router = express.Router();
 	router.use('/wpk/', webpackDevMiddleware(compiler, {}));
 	return router;
-};
+}
 
 // const array = ['/app/30_bootstrap', '/app/31_injector'];
 

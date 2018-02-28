@@ -22,7 +22,7 @@ export class StoreManager {
         this.$$container = container;
     }
 
-    $$getContainer(container) {
+    $$getContainer() {
         return this.$$container;
     }
 }

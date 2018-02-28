@@ -1,18 +1,18 @@
 export class Counter {
 
-    constructor() {
-        this.number = 10;
-    }
+	constructor() {
+		this.number = 10;
+	}
 
-    increment() {
-        this.number++;
-    }
+	increment() {
+		this.number++;
+	}
 
-    add(n) {
-        this.number += n;
-    }
+	add(n) {
+		this.number += n;
+	}
 
-    getNumber() {
-        return this.number;
-    }
-};
+	getNumber() {
+		return this.number;
+	}
+}
