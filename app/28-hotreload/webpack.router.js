@@ -5,7 +5,7 @@ const webpackHotMiddleware = require('webpack-hot-middleware');
 
 let webpackConfig = require('./webpack.config.js');
 webpackConfig = {...webpackConfig};
-
+webpackConfig.output = {...webpackConfig.output};
 webpackConfig.output.publicPath = 'http://localhost:8000/app/28-hotreload/wpk/';
 
 webpackConfig.entry = {
