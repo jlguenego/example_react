@@ -3,7 +3,20 @@ const express = require('express');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
 
-const webpackConfig = require('./webpack.config.js');
+let webpackConfig = require('./webpack.config.js');
+webpackConfig = {...webpackConfig};
+
+webpackConfig.output.publicPath = 'http://localhost:8000/app/28-hotreload/wpk/';
+
+webpackConfig.entry = {
+	bundle: [
+		'webpack-hot-middleware/client?path=./__what',
+		'./main.jsx'
+	]
+};
+
+webpackConfig.plugins = webpackConfig.plugins.slice();
+webpackConfig.plugins.push(new webpack.HotModuleReplacementPlugin());
 
 const compiler = webpack(webpackConfig);
 // eslint-disable-next-line
