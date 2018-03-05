@@ -7,6 +7,6 @@ export function Frame(props) {
         <div style={{ border: '1px solid black' }}>
             {props.children}
         </div>
-    )
+    );
 }
 
