@@ -18,3 +18,14 @@ setInterval(() => {
     ReactDOM.render(element, document.querySelector('#root'));
 }, 1000);
 
+setInterval(() => {
+    console.log('tick vanilla');
+
+    document.querySelector('#root-vanilla').innerHTML = `
+<div>  
+    <h2>Date</h2>
+    <div>Time : ${time()}</div>
+</div>
+    `;
+}, 1000);
+
