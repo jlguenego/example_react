@@ -36,5 +36,8 @@ module.exports = {
 		node: true,
 		jasmine: true,
 	},
-	globals: {}
+	globals: {
+		ReactDOM: true,
+		React: true,
+	}
 };
