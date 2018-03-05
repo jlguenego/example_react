@@ -19,16 +19,16 @@ class Switch extends React.Component {
     // handleClick = () => {
     handleClick() {
         console.log('handleClick', this);
-        this.setState((prevState, props) => ({
+        this.setState((prevState) => ({
             on: !prevState.on
         }));
     }
 
     render() {
-        const label = this.state.on ? "ON" : "OFF";
+        const label = this.state.on ? 'ON' : 'OFF';
         // return <button onClick={this.handleClick}>{label}</button>;
         // A3: use an arrow function here
-        return <button onClick={(e) => this.handleClick()}>{label}</button>;
+        return <button onClick={() => this.handleClick()}>{label}</button>;
     }
 
 }
