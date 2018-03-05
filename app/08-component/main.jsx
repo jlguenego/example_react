@@ -13,7 +13,7 @@ ReactDOM.render(<Hello1 name="Jean-Louis" />, document.getElementById('root'));
 class Hello2 extends React.Component {
 
     render() {
-        return <div className="hello">Hello again {this.props.name}</div>;
+        return <div className="hello">Hello dear {this.props.name}</div>;
     }
 }
 
@@ -21,7 +21,7 @@ ReactDOM.render(<Hello2 name="Dany" />, document.getElementById('other-root'));
 
 
 // A component can call other components.
-function MyConponent(props) {
+function MyComponent(props) {
     return (<div>
         <Hello1 name="Alice" />
         <Hello1a name="Anna" />
@@ -29,4 +29,4 @@ function MyConponent(props) {
     </div>);
 }
 
-ReactDOM.render(<MyConponent />, document.getElementById('root3'));
+ReactDOM.render(<MyComponent />, document.getElementById('root3'));
