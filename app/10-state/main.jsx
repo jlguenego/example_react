@@ -54,20 +54,20 @@ class ProgressiveWrite extends React.Component {
 
 }
 
-let name = "Jean-Louis";
+let name = 'Jean-Louis';
 
 // document.addEventListener('DOMContentLoaded', load);
 
 window.load = function () {
     // the name value is a snapshot.
     ReactDOM.render(<ProgressiveWrite text={name} />, document.getElementById('root'));
-}
+};
 
 window.unload = function () {
     ReactDOM.render(undefined, document.getElementById('root'));
-}
+};
 
 window.setText = function () {
     name = 'Dany';
-}
+};
 
