@@ -12,7 +12,7 @@
 	$('#title').innerHTML = 'Hello world!';
 
 	// spread opearator for easy immutable object.
-	const o1 = { hello: 'world' };
+	const o1 = { hello: 'world', coucou: { titi: 'toto' } };
 	const o2 = o1;
 	const o3 = { ...o1 };
 	console.log('o1', o1);
@@ -20,6 +20,7 @@
 	console.log('o3', o3);
 	console.log('o1 === o2', o1 === o2);
 	console.log('o1 === o3', o1 === o3);
+	console.log('o1.coucou === o3.coucou', o1.coucou === o3.coucou);
 
 	// Observables since ES5.1
 	const hello = {
@@ -30,7 +31,7 @@
 
 		set world(value) {
 			console.log('try to set something to the world...', value);
-			this.hiddenWorld = value;
+			this.$$hiddenWorld = value;
 			return 'now it is ' + this.hiddenWorld;
 		}
 	};
@@ -46,8 +47,19 @@
 	console.log('hello.world', hello.world);
 	hello.world = 'foo';
 	console.log(`hello.world = 'bar';`, hello.world = 'bar');
-
+	hello.$$hiddenWorld = 32;
+	console.log('$$hiddenWorld in hello', '$$hiddenWorld' in hello);
+	console.log('hello.hasOwnProperty($$hiddenWorld)', hello.hasOwnProperty('$$hiddenWorld'));
+	for (var p in hello) {
+        // List only enumerable properties.
+		console.log('p', p);
+    }
+    try {
+        delete hello.$$hiddenWorld;
+        console.log('Configurable property cannot be deleted.');
+    } catch (e) {
+        console.log('Not configurable property cannot be deleted.');
+    }
 })();
-
 
 // some element of Javascript.
