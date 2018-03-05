@@ -21,7 +21,7 @@ ReactDOM.render(<Hello2 name="Dany" />, document.getElementById('other-root'));
 
 
 // A component can call other components.
-function MyComponent(props) {
+function MyComponent() {
     return (<div>
         <Hello1 name="Alice" />
         <Hello1a name="Anna" />
