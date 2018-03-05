@@ -4,3 +4,17 @@
     border: 1px solid black;
     margin-bottom: 1em;
 }
+
+.jsx img {
+    animation: spin 50s infinite;
+    margin: 1em;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
