@@ -42,7 +42,7 @@ class LoginForm extends React.Component {
                 </form>
                 <span style={{ fontWeight: 'bold'}}>{JSON.stringify(this.state)}</span>
             </div>
-        )
+        );
     }
 }
 
