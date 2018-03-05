@@ -3,19 +3,22 @@ import ReactDOM from 'react-dom';
 
 import '../css/style.scss';
 
+const formObj = {
+    level: 3,
+    comment: 'This is a comment',
+};
+
 class MyForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            level: 3,
-            comment: 'This is a comment',
-        };
+        this.state = formObj;
     }
 
     onSubmit(event) {
         console.log('onSubmit', this);
         // in order to not let the browser go to another page.
         event.preventDefault();
+        this.setState(formObj);
     }
 
     onChange(event) {
