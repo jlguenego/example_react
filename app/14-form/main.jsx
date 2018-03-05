@@ -3,19 +3,22 @@ import ReactDOM from 'react-dom';
 
 import '../css/style.scss';
 
+const formObj = {
+    login: 'kiki',
+    password: '',
+};
+
 class LoginForm extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            login: 'kiki',
-            password: '',
-        };
+        this.state = formObj;
     }
 
     onSubmit(event) {
         console.log('onSubmit', this);
         // in order to not let the browser go to another page.
         event.preventDefault();
+        this.setState(formObj);
     }
 
     onLoginChange(event) {
@@ -33,10 +36,10 @@ class LoginForm extends React.Component {
             <div>
                 <form onSubmit={this.onSubmit.bind(this)}>
                     <label><span>Login:</span>
-                    <input name="login" onChange={this.onLoginChange.bind(this)} defaultValue={this.state.login} />
+                    <input name="login" onChange={this.onLoginChange.bind(this)} value={this.state.login} />
                     </label>
                     <label><span>Password:</span>
-                    <input name="password" type="password" onChange={this.onPasswordChange.bind(this)} defaultValue={this.state.password} />
+                    <input name="password" type="password" onChange={this.onPasswordChange.bind(this)} value={this.state.password} />
                     </label>
                     <label><span>&nbsp;</span><button>Submit</button></label>
                 </form>
