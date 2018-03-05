@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 import { StarInput } from '../16-lifting-state/StarInput';
 import { Frame } from './Frame';
@@ -11,7 +10,7 @@ export function Movie(props) {
         <Frame>
             {props.title} - {props.year} <StarInput note={props.note} />
         </Frame>
-    )
+    );
 }
 
 // use propType to check the properties used for the component.
