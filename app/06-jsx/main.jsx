@@ -59,11 +59,12 @@ function add(a, b) {
 const e6 = <div>1+2={add(1, 2)}</div>;
 console.log('e6', e6);
 
-const src = '../img/react.svg';
+
 ReactDOM.render(
     e6, document.getElementById('root6'));
 
 // 7) Javascript expression can be used inside attribute.
+const src = '../img/react.svg';
 const e7 = <img width="100" toto="{src}" src={src} />;
 console.log('e7', e7);
 
