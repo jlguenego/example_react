@@ -60,14 +60,6 @@ module.exports = {
 				}]
 			})
 		}, {
-			test: /\.html$/,
-			use: [{
-				loader: 'html-loader',
-				options: {
-					minimize: true
-				}
-			}],
-		}, {
 			// svg included in HTML files
 			test: /img.html.*\.svg$/,
 			use: [{
@@ -92,23 +84,12 @@ module.exports = {
 			}]
 		}, {
 			test: /\.(png|jpg)$/,
-			exclude: /sprite.png$/,
 			use: [{
 				loader: 'file-loader',
 				options: {
 					name: '[name].[ext]',
 					// publicPath: './wpk/',
 				}
-			}]
-		}, {
-			test: /sprite.png$/,
-			use: [{
-				loader: 'file-loader',
-				options: {
-					name: 'sprite.jpg',
-				}
-			}, {
-				loader: path.resolve(__dirname, './utils/png2jpg-loader.js'),
 			}]
 		}, {
 			test: /\.(woff|woff2)(\?v=\d+\.\d+\.\d+)?$/,
