@@ -43,7 +43,7 @@ export class Star2Input extends StarInput {
             <div>
                 {starList}
             </div>
-        )
+        );
     }
 
 
