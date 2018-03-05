@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
 const imgDir = '../16-lifting-state/img';
 
@@ -62,7 +61,7 @@ export class StarInput extends React.Component {
             <div>
                 {starList}
             </div>
-        )
+        );
     }
 }
 
