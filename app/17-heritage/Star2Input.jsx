@@ -6,24 +6,24 @@ const imgDir = '../16-lifting-state/img';
 
 export class Star2Input extends StarInput {
 
-    componentWillReceiveProps(props) {
-        if (!'note' in props) {
+    getNote(props) {
+        if (!('note' in props)) {
             return;
         }
         if (isNaN(+props.note) ||
             +props.note > props.total ||
             +props.note < 0
         ) {
-            this.state.note = undefined;
+            return;
         } else {
-            this.state.note = +props.note;
+            return +props.note;
         }
     }
 
     render() {
-        const array =Array.apply(null, {length: this.props.total});
+        const array = Array.apply(null, { length: this.props.total });
         console.log('array', array);
-        const array2 = array.map((n,i)=> i+1);
+        const array2 = array.map((n, i) => i + 1);
         console.log('array2', array2);
         const starList = array2.map(n => {
             let src = 'gray_star.png';
