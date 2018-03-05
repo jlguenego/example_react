@@ -7,23 +7,29 @@ export class StarInput extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            note: 3,
+            note: this.getNote(props),
         };
-        this.componentWillReceiveProps(props);
+        
     }
 
-    componentWillReceiveProps(props) {
-        if (!'note' in props) {
+    getNote(props) {
+        if (!('note' in props)) {
             return;
         }
         if (isNaN(+props.note) ||
             +props.note > 5 ||
             +props.note < 0
         ) {
-            this.state.note = undefined;
+            return;
         } else {
-            this.state.note = +props.note;
+            return +props.note;
         }
+    }
+
+    componentWillReceiveProps(props) {
+        this.setState({
+            note: this.getNote(props),
+        });
     }
 
     onClick(n, e) {
