@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "30": "babel ./app/30-react-server/src --watch --out-dir ./app/30-react-server/out",
-    "31": "babel ./app/31-isomorphic/src --watch --out-dir ./app/31-isomorphic/out",
+    "31": "babel ./app/31-server-routes/src --watch --out-dir ./app/31-server-routes/out",
     "start30": "nodemon ./app/30-react-server/out/server.js",
-    "start31": "nodemon ./app/31-isomorphic/out/server.js",
+    "start31": "nodemon ./app/31-server-routes/out/server.js",
     "-start": "nodemon server.js"
   },
   "keywords": [],
