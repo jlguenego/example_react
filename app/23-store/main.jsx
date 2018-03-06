@@ -23,12 +23,15 @@ class App extends React.Component {
     }
 
     increment() {
+        // Next line is the official way to update the store state.
         this.props.store.incrementNumber();
         this.setState({});
     }
 
     render() {
         console.log('render');
+        // Next commented line is like a robbery... It's bad !
+        // this.props.store.number += 2;
         return (<div>
             <button onClick={this.increment.bind(this)}>Increment</button>
             {this.props.store.number}
