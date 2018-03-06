@@ -14,7 +14,7 @@ function Card(props) {
 
 function click(e) {
     console.log('click!', e.target, e.currentTarget.children);
-    const index = [].indexOf.call(e.currentTarget.children, e.target.closest('div'));
+    const index = Array.prototype.indexOf.call(e.currentTarget.children, e.target.closest('div'));
     console.log('index', index);
 }
 
