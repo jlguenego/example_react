@@ -16,3 +16,17 @@ export class Counter {
 		return this.number;
 	}
 }
+
+// export class Counter {
+
+// 	constructor() {
+// 		let number = 10;
+// 		this.getNumber = () => number;
+// 		this.increment = () => {
+// 			number++;
+// 		};
+// 		this.add = n => {
+// 			number += n;
+// 		};
+// 	}
+// }
