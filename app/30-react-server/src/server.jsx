@@ -1,9 +1,10 @@
-const express = require('express');
-const serveIndex = require('serve-index');
+import express from 'express';
+import serveIndex from 'serve-index';
 
-const React = require('react');
-const ReactDomServer = require('react-dom/server');
+import React from 'react';
+import ReactDomServer from 'react-dom/server';
 
+import App from './App';
 
 const app = express();
 
@@ -13,6 +14,11 @@ app.use(serveIndex(htdocs, {icons: true}));
 
 app.get('/hello', (req, res) => {
     const html = ReactDomServer.renderToStaticMarkup(<div>Hello world!</div>);
+    res.send(html);
+});
+
+app.get('/world', (req, res) => {
+    const html = ReactDomServer.renderToStaticMarkup(<App />);
     res.send(html);
 });
 
