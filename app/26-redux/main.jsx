@@ -111,6 +111,38 @@ function App(props) {
     </div>);
 }
 
+// class App extends React.Component {
+//     constructor(props) {
+//         super(props);
+//         this.state = {
+//             inputValue: +props.input,
+//         };
+//     }
+
+//     onChange(e) {
+//         console.log('e', e.target.value);
+//         const state = {
+//             inputValue: +e.target.value,
+//         };
+//         console.log('state', state);
+//         this.setState(state);
+//     }
+
+//     render() {
+//         return (<div>
+//             <h2>Value of counter: {this.props.number}</h2>
+//             <button onClick={this.props.increment}>Increment</button>
+//             <button onClick={this.props.add.bind(undefined, 2)}>Add 2</button>
+//             <br />
+//             <input value={this.state.inputValue} type="number" onChange={this.onChange.bind(this)} />
+//             <br />
+//             <button onClick={() => { this.props.saveInput(this.state.inputValue); this.props.add(this.state.inputValue); }}>Add input</button>
+
+//         </div>);
+//     }
+
+// }
+
 // 7) use react-redux to create a container component.
 const mapStateToProps = state => ({ number: state.number, input: state.input });
 const mapDispatchToProps = dispatch => ({

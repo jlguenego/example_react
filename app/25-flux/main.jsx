@@ -17,18 +17,20 @@ class MyStore extends ReduceStore {
         return { number: 10 };
     }
 
-    reduce(state, action) {
+    reduce(prevState, action) {
+        let state;
         switch (action.type) {
             case 'increment':
                 // it is required to send a brand new state. Not the existing one.
                 // we call that an immutable object.
+                state = { ...prevState };
                 state.number++;
-                return { ...state };
+                return state;
             case 'add':
-                return { number: state.number + action.n };
+                return { number: prevState.number + action.n };
 
             default:
-                return state;
+                return prevState;
         }
     }
 }
