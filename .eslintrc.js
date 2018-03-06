@@ -39,5 +39,6 @@ module.exports = {
 	globals: {
 		ReactDOM: true,
 		React: true,
+		Promise: true,
 	}
 };
