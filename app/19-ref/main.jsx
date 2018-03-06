@@ -28,7 +28,7 @@ class App extends React.Component {
             <div>
                 <span ref={this.onRef.bind(this)} />
                 <button onClick={this.switch.bind(this)}>{this.state.on ? 'Hide' : 'Show'}</button>
-                {this.state.on ? <Hello ref={this.onRef} name="JL" /> : ''}
+                {this.state.on ? <Hello ref={this.onRef.bind(this)} name="JL" /> : ''}
             </div>
         );
     }
@@ -39,6 +39,8 @@ class Hello extends React.Component {
         return <span>Hello {this.props.name}!</span>;
     }
 }
+
+// const Hello = (props) => <span>Hello {props.name}!</span>;
 
 document.addEventListener('DOMContentLoaded', () => {
     ReactDOM.render(<App />, document.getElementById('root'));
