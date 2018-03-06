@@ -11,6 +11,8 @@ function App(props) {
     return (<div>
         <button onClick={props.increment}>Increment</button>
         <button onClick={() => props.add(2)}>add 2</button>
+        {/* <button onClick={() => props.times(2)}>times 2</button> */}
+        {/* <button onClick={props.add.bind(undefined, 3)}>add 3</button> */}
         {props.getNumber()}
     </div>);
 }

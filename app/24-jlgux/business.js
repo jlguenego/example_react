@@ -12,6 +12,10 @@ export class Counter {
 		this.number += n;
 	}
 
+	times(n) {
+		this.number *= n;
+	}
+
 	getNumber() {
 		return this.number;
 	}

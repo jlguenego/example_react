@@ -38,6 +38,7 @@ export function createContainer(view, storeManager) {
     
         render() {
             console.log('this.state', this.state);
+            // return <view {...this.state} />
             return React.createElement(view, this.state);
         }
     };
