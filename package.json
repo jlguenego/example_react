@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "-start": "nodemon server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "30": "babel ./app/30-react-server/src --watch --out-dir ./app/30-react-server/out",
+    "start30": "nodemon ./app/30-react-server/out/server.js",
+    "-start": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -52,5 +53,6 @@
     "webpack": "^3.11.0",
     "webpack-dev-middleware": "^2.0.5",
     "webpack-hot-middleware": "^2.21.0"
-  }
+  },
+  "devDependencies": {}
 }

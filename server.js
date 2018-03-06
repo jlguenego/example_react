@@ -3,7 +3,7 @@ const serveIndex = require('serve-index');
 const bodyParser = require('body-parser');
 const webpackRouter = require('./webpack.router.js');
 
-var app = express();
+const app = express();
 app.use(bodyParser.json());
 
 app.use(webpackRouter);
@@ -38,7 +38,7 @@ app.use(function(req, res, next) {
 	next();
 });
 
-var port = 8000;
+const port = 8000;
 app.listen(port, function() {
 	console.log('server started on port ' + port);
 });
