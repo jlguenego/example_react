@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StarInput } from '../16-lifting-state/StarInput';
+import StarInput from '../16-lifting-state/StarInput';
 
 const imgDir = '../16-lifting-state/img';
 

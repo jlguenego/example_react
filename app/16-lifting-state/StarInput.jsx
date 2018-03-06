@@ -2,7 +2,7 @@ import React from 'react';
 
 const imgDir = '../16-lifting-state/img';
 
-export class StarInput extends React.Component {
+export default class StarInput extends React.Component {
     constructor(props) {
         super(props);
         this.state = {

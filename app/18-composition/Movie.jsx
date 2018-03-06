@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { StarInput } from '../16-lifting-state/StarInput';
+import StarInput from '../16-lifting-state/StarInput';
 import { Frame } from './Frame';
 
 import PropTypes from 'prop-types';

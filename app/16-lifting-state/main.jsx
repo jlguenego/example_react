@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom';
 
 import '../css/style.scss';
 
-import { StarInput } from './StarInput.jsx';
+import StarInput from './StarInput.jsx';
 
 class App extends React.Component {
     constructor() {
