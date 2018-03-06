@@ -1,8 +1,10 @@
 import React from 'react';
-import { StaticRouter as Router, Route, Link } from 'react-router-dom';
+import { StaticRouter, BrowserRouter, Route, Link } from 'react-router-dom';
 
 import HomeView from './HomeView';
 import AboutView from './AboutView';
+
+const Router = StaticRouter;
 
 const Head = () => (
     <head>
