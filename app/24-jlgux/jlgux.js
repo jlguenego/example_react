@@ -8,7 +8,7 @@ export class StoreManager {
         transitions.forEach(transition => {
             this[transition] = (...args) => {
                 this.$$store[transition].apply(this.$$store, args);
-                this.$$getContainer().setState(this);
+                this.$$getContainers().forEach(n => n.setState(this));
             };
         });
         getters.forEach(getter => {
@@ -18,12 +18,14 @@ export class StoreManager {
         });
     }
 
+    $$containers = [];
+
     $$addContainer(container) {
-        this.$$container = container;
+        this.$$containers.push(container);
     }
 
-    $$getContainer() {
-        return this.$$container;
+    $$getContainers() {
+        return this.$$containers;
     }
 }
 
