@@ -1,5 +1,5 @@
 import React from 'react';
-import { StaticRouter, BrowserRouter, Route, Link } from 'react-router-dom';
+import { StaticRouter, /*BrowserRouter,*/ Route, Link } from 'react-router-dom';
 
 import HomeView from './HomeView';
 import AboutView from './AboutView';
