@@ -7,7 +7,7 @@ import Html from './Html';
 
 const app = express.Router();
 
-const basename = '/app/32-isomorphic';
+import { basename } from './basename';
 
 
 app.get(['/', '/about'], (req, res) => {

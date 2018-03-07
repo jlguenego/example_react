@@ -7,7 +7,7 @@ import Layout from './Layout';
 
 console.log('react isomorphic');
 
-const basename = '/app/32-isomorphic';
+const basename = BASENAME;
 
 document.addEventListener('DOMContentLoaded', () => {
     ReactDOM.hydrate(<Layout basename={basename} />, document.getElementById('root'));

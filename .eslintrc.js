@@ -40,5 +40,6 @@ module.exports = {
 		ReactDOM: true,
 		React: true,
 		Promise: true,
+		BASENAME: true,
 	}
 };
