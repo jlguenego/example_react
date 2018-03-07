@@ -11,7 +11,7 @@ const Header = () => <header>
 </header>;
 
 
-const Footer = () => <footer>JLG Consulting @2001 - {new Date().getFullYear()}</footer>;
+const Footer = () => <footer>JLG Consulting @2001 - 2018</footer>;
 
 function isServer() {
     return ! (typeof window != 'undefined' && window.document);

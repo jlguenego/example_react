@@ -4,9 +4,12 @@ import Layout from './Layout';
 
 const Html = (props) => (
     <html>
-        <Head basename={props.basename}/>
+        <Head basename={props.basename} />
         <body>
-            <Layout basename={props.basename} location={props.url} />
+            <div id="root">
+                <Layout basename={props.basename} location={props.url} />
+            </div>
+
         </body>
     </html>
 );
