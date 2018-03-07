@@ -4,10 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "31": "babel ./app/31-server-routes/src --watch --out-dir ./app/31-server-routes/out",
-    "start30": "babel-node ./app/30-react-server/server.jsx",
-    "start31": "nodemon ./app/31-server-routes/out/server.js",
-    "start": "babel-node server.js"
+    "start": "nodemon -e js,jsx --exec babel-node -- server.js"
   },
   "keywords": [],
   "author": "",
