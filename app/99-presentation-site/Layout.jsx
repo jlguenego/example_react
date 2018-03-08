@@ -5,6 +5,7 @@ import ExampleView from './view/ExampleView';
 import ServiceView from './view/ServiceView';
 import ContactView from './view/ContactView';
 
+
 const Header = () => {
 
     return (
@@ -26,13 +27,14 @@ const Header = () => {
 };
 
 
-const Footer = () => <footer>
-    <p>Copyright © 2018 - TheReactFactory. website made by
-            <Link to="https://jlg-consulting.com">
-            JLG Consulting @2001 - <span>{new Date().getFullYear()}</span>
-        </Link>.
+const Footer = () =>
+    <footer>
+        <p>Copyright © 2018 - TheReactFactory. website made by&nbsp;
+            <Link to="https://jlg-consulting.com">JLG Consulting</Link>
+            <span> @2001 - </span><span>{new Date().getFullYear()}</span>
+            <span>.</span>
         </p>
-</footer>;
+    </footer>;
 
 
 function isServer() {

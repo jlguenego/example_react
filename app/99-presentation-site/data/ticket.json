@@ -2,7 +2,18 @@
     "tickets": [
         {
             "id": 1,
-""
+            "name": "Toto",
+            "description": "This is the description of toto" 
+        },
+        {
+            "id": 2,
+            "name": "Titi",
+            "description": "This is the description of titi" 
+        },
+        {
+            "id": 3,
+            "name": "Tata",
+            "description": "This is the description of tata" 
         }
     ]
 }
