@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ContactView = () => <main>
+const ServiceView = () => <main>
     <section>
         <div className="container">
             <h1>Liste de ticket de maintenance</h1>
@@ -37,4 +37,4 @@ const ContactView = () => <main>
     </section>
 </main>;
 
-export default ContactView;
+export default ServiceView;

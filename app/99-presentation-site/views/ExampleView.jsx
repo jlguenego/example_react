@@ -1,6 +1,6 @@
-import React from 'React';
+import React from 'react';
 
-const ExamplesView = () => <main>
+const ExampleView = () => <main>
     <section>
         <div className="container">
             <div className="row">
@@ -117,4 +117,4 @@ const ExamplesView = () => <main>
     </section>
 </main>;
 
-export default ExamplesView;
+export default ExampleView;
