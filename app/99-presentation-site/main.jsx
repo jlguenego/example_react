@@ -16,6 +16,14 @@ import Layout from './layout/Layout';
 
 const basename = BASENAME;
 
-document.addEventListener('DOMContentLoaded', () => {
-    ReactDOM.render(<Layout basename={basename} />, document.getElementById('root'));
-});
+function isMobile() {
+    return window.innerWidth < 768;
+}
+
+function render() {
+    console.log('render', isMobile());
+    ReactDOM.render(<Layout basename={basename} isMobile={isMobile()}/>, document.getElementById('root'));
+}
+
+document.addEventListener('DOMContentLoaded', render);
+window.addEventListener('resize', render);

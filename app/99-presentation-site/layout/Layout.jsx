@@ -21,7 +21,7 @@ if (isServer()) {
 const Layout = (props) => (
     <Router {...props}>
         <React.Fragment>
-            <Header />
+            <Header {...props}/>
             <Route exact path="/" component={HomeView} />
             <Route path="/examples" component={ExampleView} />
             <Route path="/services" component={ServiceView} />
