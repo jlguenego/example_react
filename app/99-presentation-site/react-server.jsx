@@ -14,7 +14,8 @@ app.get(['/', '/examples', '/services', '/contact'], (req, res) => {
     console.log('calling the React app:', req.url, req.originalUrl);
     const props = { basename, url: req.url };
     const html = '<!DOCTYPE html>' + ReactDomServer.renderToStaticMarkup(<Html {...props} />);
-    res.send(html);
+    // res.send(html);
+    res.sendFile('./index.html', { root: __dirname });
 });
 
 module.exports = app;

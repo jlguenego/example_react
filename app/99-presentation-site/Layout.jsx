@@ -1,24 +1,29 @@
 import React from 'react';
-import { Link, Route, BrowserRouter, StaticRouter } from 'react-router-dom';
+import { Link, NavLink, Route, BrowserRouter, StaticRouter } from 'react-router-dom';
 import HomeView from './views/HomeView';
 import ExampleView from './views/ExampleView';
 import ServiceView from './views/ServiceView';
 import ContactView from './views/ContactView';
 
-const Header = () => <header>
-    <div className="site-id">
-        <Link to="/" className="menu-item">
-            <span className="helper"></span>
-            <img className="logo" src="./img/logo.png" />
-        </Link>
-    </div>
-    <menu>
-        <Link to="/" className="menu-item">Home</Link>
-        <Link to="/examples" className="menu-item">Examples</Link>
-        <Link to="/services" className="menu-item">Services</Link>
-        <Link to="/contact" className="menu-item">Contact</Link>
-    </menu>
-</header>;
+const Header = () => {
+
+    return (
+        <header>
+            <div className="site-id">
+                <Link to="/" className="menu-item">
+                    <span className="helper"></span>
+                    <img className="logo" src="./img/logo.png" />
+                </Link>
+            </div>
+            <menu>
+                <NavLink to="/" exact className="menu-item">Home</NavLink>
+                <NavLink to="/examples" className="menu-item">Examples</NavLink>
+                <NavLink to="/services" className="menu-item">Services</NavLink>
+                <NavLink to="/contact" className="menu-item">Contact</NavLink>
+            </menu>
+        </header>
+    );
+};
 
 
 const Footer = () => <footer>
