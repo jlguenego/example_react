@@ -9,7 +9,7 @@ const HomeView = () =>
                 <p className="tagline">Use React for your webapp !</p>
                 <p className="buttons">
                     <Link to="/examples" className="button primary">See our examples</Link>
-                    <span>&nbsp;</span>
+                    &nbsp;
                     <Link to="/services" className="button secondary">Check our services</Link>
                 </p>
             </div>
@@ -17,6 +17,7 @@ const HomeView = () =>
         <section className="social-media-share">
             <button className="facebook">
                 <i className="fa fa-facebook-square"></i>
+                &nbsp;
                 <b>Share on Facebook</b>
             </button>
         </section>
