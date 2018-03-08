@@ -15,5 +15,5 @@ import Layout from './Layout';
 const basename = BASENAME;
 
 document.addEventListener('DOMContentLoaded', () => {
-    ReactDOM.hydrate(<Layout basename={basename} />, document.getElementById('root'));
+    ReactDOM.render(<Layout basename={basename} />, document.getElementById('root'));
 });
