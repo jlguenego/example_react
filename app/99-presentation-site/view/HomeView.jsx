@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import FacebookShare from '../widget/FacebookShare';
+
 
 const HomeView = () =>
     <main>
@@ -14,13 +16,7 @@ const HomeView = () =>
                 </p>
             </div>
         </section>
-        <section className="social-media-share">
-            <button className="facebook">
-                <i className="fa fa-facebook-square"></i>
-                &nbsp;
-                <b>Share on Facebook</b>
-            </button>
-        </section>
+        <FacebookShare />
     </main>;
 
 export default HomeView;

@@ -1,4 +1,5 @@
 import React from 'react';
+import FacebookShare from '../widget/FacebookShare';
 
 const ServiceView = () => <main>
     <section>
@@ -30,11 +31,7 @@ const ServiceView = () => <main>
             </table>
         </div>
     </section>
-    <section className="social-media-share">
-        <button className="facebook">
-            <i className="fa fa-facebook-square"></i> <b>Share on Facebook</b>
-        </button>
-    </section>
+    <FacebookShare/>
 </main>;
 
 export default ServiceView;

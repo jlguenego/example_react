@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link, NavLink, Route, BrowserRouter, StaticRouter } from 'react-router-dom';
-import HomeView from './views/HomeView';
-import ExampleView from './views/ExampleView';
-import ServiceView from './views/ServiceView';
-import ContactView from './views/ContactView';
+import HomeView from './view/HomeView';
+import ExampleView from './view/ExampleView';
+import ServiceView from './view/ServiceView';
+import ContactView from './view/ContactView';
 
 const Header = () => {
 

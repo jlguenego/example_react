@@ -1,4 +1,5 @@
 import React from 'react';
+import FacebookShare from '../widget/FacebookShare';
 
 const PhotoGalleryItem = () =>
     <div className="col-4">
@@ -25,12 +26,7 @@ const ExampleView = () => <main>
         {[1,2,3,4].map((n, i) => <PhotoGalleryRow key={i}/>)}
         </div>
     </section>
-    <section className="social-media-share">
-        <button className="facebook">
-            <i className="fa fa-facebook-square"></i>
-            <b>Share on Facebook</b>
-        </button>
-    </section>
+    <FacebookShare />
 </main>;
 
 export default ExampleView;
