@@ -1,3 +1,5 @@
+import 'babel-polyfill';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 
@@ -10,7 +12,7 @@ import './css/theme.scss';
 import './css/photo-gallery.scss';
 import './css/table.scss';
 
-import Layout from './Layout';
+import Layout from './layout/Layout';
 
 const basename = BASENAME;
 

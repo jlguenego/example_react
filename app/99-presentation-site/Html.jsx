@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from './Head';
-import Layout from './Layout';
+import Layout from './layout/Layout';
 
 const Html = (props) => (
     <html>

@@ -21,7 +21,8 @@ class TicketTable extends React.Component {
         console.log('this.state', this.state);
     }
 
-    componentWillMount() {
+    componentDidMount() {
+        this._isMounted = true;
         (async () => {
             try {
                 const state = {};
@@ -30,13 +31,21 @@ class TicketTable extends React.Component {
                 const json = await ticket.fetch();
                 state.table = json.tickets;
                 console.log('state', state);
-                this.setState(state);
+                // eslint-disable-next-line
+                // if (this.isMounted()) {
+                if (this._isMounted) {
+                    this.setState(state);
+                }
             } catch (e) {
                 console.error('Cannot fill the table:', e);
             }
         })();
 
 
+    }
+
+    componentWillUnmount() {
+        this._isMounted = false;
     }
 
     render() {

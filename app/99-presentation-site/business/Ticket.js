@@ -1,5 +1,3 @@
-import 'babel-polyfill';
-
 export class Ticket {
     async fetch() {
         return fetch('./data/ticket.json').then(function(response) {
