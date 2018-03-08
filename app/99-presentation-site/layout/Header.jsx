@@ -16,10 +16,7 @@ const Header = (props) => {
     );
 };
 
-const MenuDesktop = () => <Menu />;
-const MenuMobile = () => <Menu isMobile={true} />;
-
-const Menu = (props) => {
+const MenuDesktop = (props) => {
     const style = {
         menu: {
             float: 'right',
@@ -34,19 +31,49 @@ const Menu = (props) => {
 
     };
 
-    if (props.isMobile) {
-        style.menu = {
-            color: 'blue',
-        };
-    }
+    const cssClass = {
+        menuItem: 'menu-item hoverable',
+    };
 
     return (<menu style={style.menu}>
-        <NavLink style={style.menuItem} to="/" exact className="menu-item">Home</NavLink>
-        <NavLink style={style.menuItem} to="/examples" className="menu-item">Examples</NavLink>
-        <NavLink style={style.menuItem} to="/services" className="menu-item">Services</NavLink>
-        <NavLink style={style.menuItem} to="/contact" className="menu-item">Contact</NavLink>
+        <NavLink style={style.menuItem} to="/" exact className={cssClass.menuItem}>Home</NavLink>
+        <NavLink style={style.menuItem} to="/examples" className={cssClass.menuItem}>Examples</NavLink>
+        <NavLink style={style.menuItem} to="/services" className={cssClass.menuItem}>Services</NavLink>
+        <NavLink style={style.menuItem} to="/contact" className={cssClass.menuItem}>Contact</NavLink>
     </menu>);
-}
+};
+
+const MenuMobile = (props) => {
+    const style = {
+        menu: {
+            display: 'block',
+            position: 'absolute',
+            zIndex: 1,
+            top: '4rem',
+            height: 'auto',
+            width: '100%',
+        },
+        menuItem: {
+            display: 'block',
+            width: '100%',
+            textAlign: 'center',
+            // backgroundColor: 'white',
+        }
+
+    };
+
+    const cssClass = {
+        menuItem: 'menu-item hoverable mobile',
+    };
+
+    
+    return (<menu style={style.menu} onClick={props.handleClick}>
+        <NavLink style={style.menuItem} to="/" exact className={cssClass.menuItem}>Home</NavLink>
+        <NavLink style={style.menuItem} to="/examples" className={cssClass.menuItem}>Examples</NavLink>
+        <NavLink style={style.menuItem} to="/services" className={cssClass.menuItem}>Services</NavLink>
+        <NavLink style={style.menuItem} to="/contact" className={cssClass.menuItem}>Contact</NavLink>
+    </menu>);
+};
 
 
 
@@ -77,7 +104,7 @@ class Hamburger extends React.Component {
         return (
             <React.Fragment>
                 <i style={style} onClick={this.onClick.bind(this)} className="fa fa-bars"></i>
-                {this.state.isMenuOpen ? <MenuMobile /> : null}
+                {this.state.isMenuOpen ? <MenuMobile handleClick={this.onClick.bind(this)}/> : null}
             </React.Fragment>
         );
     }

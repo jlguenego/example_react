@@ -33,6 +33,12 @@ menu {
     line-height: $headerHeight;
     height: 100%;
     padding: 0 1.5em;
+    &.mobile {
+        background: white;
+        &:hover {
+            background: #eee;
+        }
+    }
 }
 
 button, .button {
