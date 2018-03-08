@@ -24,7 +24,7 @@ function router(directory) {
 // const array = ['/app/30_bootstrap', '/app/31_injector'];
 
 const array = fs.readdirSync('./app')
-	.filter(file => file.match(/^32-/) &&
+	.filter(file => file.match(/^99-/) &&
 		fs.lstatSync('./app/' + file).isDirectory() &&
 		fs.existsSync('./app/' + file + '/webpack.config.js'));
 
