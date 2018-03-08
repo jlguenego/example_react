@@ -16,7 +16,7 @@ const Header = (props) => {
     );
 };
 
-const MenuDesktop = (props) => {
+const MenuDesktop = () => {
     const style = {
         menu: {
             float: 'right',
