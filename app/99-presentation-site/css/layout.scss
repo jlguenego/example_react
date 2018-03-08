@@ -121,3 +121,9 @@ footer {
     display: block;
 }
 
+
+@media only screen and (max-width: 768px) {
+    .logo {
+        width: 10em;
+    }
+}
