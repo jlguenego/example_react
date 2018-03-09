@@ -7,7 +7,7 @@ const Html = (props) => (
         <Head />
         <body>
             <div id="root">
-                <Layout basename={props.basename} location={props.url} />
+                <Layout basename={props.basename} location={props.url} context={{}} />
             </div>
 
         </body>
