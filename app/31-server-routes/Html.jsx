@@ -10,7 +10,6 @@ const basename = '/app/31-server-routes';
 
 const Head = () => (
     <head>
-        <base href={basename + '/'} />
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Server App</title>
@@ -44,7 +43,9 @@ const Html = (props) => (
     <html>
         <Head />
         <body>
-            <Root {...props} />
+            <div id="root">
+                <Root {...props} />
+            </div>
         </body>
     </html>
 );
