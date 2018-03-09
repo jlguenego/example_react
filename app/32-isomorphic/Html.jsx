@@ -4,7 +4,7 @@ import Layout from './Layout';
 
 const Html = (props) => (
     <html>
-        <Head basename={props.basename} />
+        <Head />
         <body>
             <div id="root">
                 <Layout basename={props.basename} location={props.url} />
