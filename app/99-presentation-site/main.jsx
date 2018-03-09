@@ -22,7 +22,7 @@ function isMobile() {
 
 function render() {
     console.log('render', isMobile());
-    ReactDOM.render(<Layout basename={basename} isMobile={isMobile()}/>, document.getElementById('root'));
+    ReactDOM.hydrate(<Layout basename={basename} isMobile={isMobile()}/>, document.getElementById('root'));
 }
 
 document.addEventListener('DOMContentLoaded', render);
