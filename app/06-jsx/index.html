@@ -1,72 +1,70 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSX</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>JSX</title>
-  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-  <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="style.css">
-</head>
+  <body class="jsx">
+    <main>
+      <h1>JSX</h1>
+      <p>Please open the console with <code>F12</code></p>
 
-<body class="jsx">
-  <main>
-    <h1>JSX</h1>
-    <p>Please open the console with <code>F12</code></p>
+      <h2>Ex1</h2>
+      <p>Do not render unknown element.</p>
+      <div id="root1"></div>
 
-    <h2>Ex1</h2>
-    <p>Do not render unknown element.</p>
-    <div id="root1"></div>
+      <h2>Ex2</h2>
+      <p>Do not render an element starting with uppercase. It will be considered as React component.</p>
+      <div id="root2"></div>
 
-    <h2>Ex2</h2>
-    <p>Do not render an element starting with uppercase. It will be considered as React component.</p>
-    <div id="root2"></div>
+      <h2>Ex3</h2>
+      <p>Do not use attribute <code>class</code>, use <code>className</code> instead.</p>
+      <div id="root3"></div>
 
-    <h2>Ex3</h2>
-    <p>Do not use attribute <code>class</code>, use <code>className</code> instead.</p>
-    <div id="root3"></div>
+      <h2>Ex4</h2>
+      <p>Better should use parenthesis for wrapping multiline JSX. Avoid automatic column insertion problems.</p>
+      <div id="root4"></div>
 
-    <h2>Ex4</h2>
-    <p>Better should use parenthesis for wrapping multiline JSX. Avoid automatic column insertion problems.</p>
-    <div id="root4"></div>
+      <h2>Ex5</h2>
+      <p>Always use an enclosing tag, at least a <code>React.Fragment</code></p>
+      <div id="root5"></div>
 
-    <h2>Ex5</h2>
-    <p>Always use an enclosing tag, at least a <code>React.Fragment</code></p>
-    <div id="root5"></div>
+      <h2>Ex6</h2>
+      <p>Javascript expression can be used inside TextElement.</p>
+      <div id="root6"></div>
 
-    <h2>Ex6</h2>
-    <p>Javascript expression can be used inside TextElement.</p>
-    <div id="root6"></div>
+      <h2>Ex7</h2>
+      <p>Javascript expression can be used inside attribute.</p>
+      <div id="root7"></div>
 
-    <h2>Ex7</h2>
-    <p>Javascript expression can be used inside attribute.</p>
-    <div id="root7"></div>
+      <h2>Ex8</h2>
+      <p>Self closing tag are permitted.</p>
+      <div id="root8"></div>
 
-    <h2>Ex8</h2>
-    <p>Self closing tag are permitted.</p>
-    <div id="root8"></div>
+      <h2>Ex9</h2>
+      <p>Dot notation for element is permitted, but not [] notation.</p>
+      <div id="root9"></div>
 
-    <h2>Ex9</h2>
-    <p>Dot notation for element is permitted, but not [] notation.</p>
-    <div id="root9"></div>
+      <h2>Ex10</h2>
+      <p>Spread attribute.</p>
+      <div id="root10"></div>
 
-    <h2>Ex10</h2>
-    <p>Spread attribute.</p>
-    <div id="root10"></div>
-    
-    <section>
-      <h2>Notes</h2>
-      <ul>
-        <li>Be sure to run the Chrome browser with options <code>--allow-file-access-from-files</code></li>
-        <li>JSX create React.createElement() javascript code.</li>
-        <li>Question: how we do a comment inside a JSX?</li>
-      </ul>
-    </section>
-  </main>
-  <script src="main.jsx" type="text/babel"></script>
-</body>
-
+      <section>
+        <h2>Notes</h2>
+        <ul>
+          <li>Be sure to run the Chrome browser with options <code>--allow-file-access-from-files</code></li>
+          <li>JSX create React.createElement() javascript code.</li>
+          <li>Question: how we do a comment inside a JSX?</li>
+        </ul>
+      </section>
+    </main>
+    <script src="main.jsx" type="text/babel"></script>
+  </body>
 </html>

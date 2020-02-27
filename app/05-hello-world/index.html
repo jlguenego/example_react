@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hello World</title>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6.26.0/babel.min.js"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <title>Hello World</title>
-  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
-  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-  <script src="https://unpkg.com/babel-standalone@6.15.0/babel.min.js"></script>
-  <link rel="stylesheet" href="../css/style.css">
-</head>
+  <body>
+    <main>
+      <h1>Hello World in React</h1>
+      <div id="root"></div>
+      <section>
+        <h2>Notes</h2>
+        <ul>
+          <li>ReactDOM.render is a function that can insert element in DOM.</li>
+          <li>First argument is not ES5 or ES6+. It is JSX.</li>
+          <li>JSX is converted by Babel to ES5.</li>
+          <li><code>ReactDOM</code> is a global class published by React.</li>
+        </ul>
+      </section>
+    </main>
+    <script type="text/babel">
+      const style = {
+        // backgroundColor: 'black',
+      };
 
-<body>
-  <main>
-    <h1>Hello World in React</h1>
-    <div id="root"></div>
-    <section>
-      <h2>Notes</h2>
-      <ul>
-        <li>ReactDOM.render is a function that can insert element in DOM.</li>
-        <li>First argument is not ES5 or ES6+. It is JSX.</li>
-        <li>JSX is converted by Babel to ES5.</li>
-        <li>
-          <code>ReactDOM</code> is a global class published by React.</li>
-      </ul>
-    </section>
-  </main>
-  <script type="text/babel">
-
-    const style = {
-      // backgroundColor: 'black',
-    }
-
-    ReactDOM.render(
-    <div className="hello" style={style}>Hello, world!</div>, document.getElementById('root') );
-
-  </script>
-  <!--
+      ReactDOM.render(
+        <div className="hello" style={style}>
+          Hello, world!
+        </div>,
+        document.getElementById('root')
+      );
+    </script>
+    <!--
       Note: this page is a great way to try React but it's not suitable for production.
       It slowly compiles JSX with Babel in the browser and uses a large development build of React.
 
@@ -47,6 +47,5 @@
       * https://reactjs.org/docs/react-without-jsx.html
       * https://reactjs.org/docs/cdn-links.html
     -->
-</body>
-
+  </body>
 </html>
