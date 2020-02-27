@@ -1,38 +1,39 @@
-body, html {
-    padding: 0;
-    margin: 0;
+body,
+html {
+  padding: 0;
+  margin: 0;
 }
 
 h1 {
-    display: table-cell;
-    height: 100vh;
-    width: 100vw;
-    animation: introduce 10s;
-    background-color: hsl(0, 100%, 90%);
-    color: hsl(240, 100%, 80%);
-    vertical-align: middle;
-    padding: 0;
-    margin: 0;
-    text-align: center;
-    font-size: 10em;
-    font-family: monospace;
+  display: table-cell;
+  height: 100vh;
+  width: 100vw;
+  animation: introduce 10s;
+  background-color: hsl(0, 100%, 90%);
+  color: hsl(240, 100%, 80%);
+  vertical-align: middle;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 10em;
+  font-family: monospace;
 }
 
 @keyframes introduce {
-    0% {
-        transform: scaleY(0) rotateZ(80deg);
-        filter: blur(0px);
-    }
-    50% {
-        transform: scaleY(1) rotateZ(0deg);
-        filter: blur(0px);
-    }
-    75% {
-        transform: scaleY(1) rotateZ(0deg);
-        filter: blur(10px);
-    }
-    100% {
-        transform: scaleY(1) rotateZ(0deg);
-        filter: blur(0px);
-    }
+  0% {
+    transform: scaleY(0) rotateZ(80deg);
+    filter: blur(0px);
+  }
+  50% {
+    transform: scaleY(1) rotateZ(0deg);
+    filter: blur(0px);
+  }
+  75% {
+    transform: scaleY(1) rotateZ(0deg);
+    filter: blur(10px);
+  }
+  100% {
+    transform: scaleY(1) rotateZ(0deg);
+    filter: blur(0px);
+  }
 }
