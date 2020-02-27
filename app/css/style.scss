@@ -1,30 +1,31 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
 html,
 body {
-    width: 100%;
-    height: 100%;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+  width: 100%;
+  height: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+    'Helvetica Neue', sans-serif;
 }
 
 main,
 header,
 footer {
-    display: block;
-    padding: 0 1em;
+  display: block;
+  padding: 0 1em;
 }
 
 header,
 footer {
-    height: 3rem;
+  height: 3rem;
 }
 
 main {
-    min-height: calc(100vh - 6rem);
+  min-height: calc(100vh - 6rem);
 }
 
 section,
@@ -32,106 +33,106 @@ p,
 label,
 input,
 button {
-    margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 h1 {
-    font-size: 2em;
-    font-weight: bold;
-    margin-bottom: 1em;
-    animation: left 500ms;
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  animation: left 500ms;
 }
 
 ul {
-    padding: 1em;
+  padding: 1em;
 }
 
 button {
-    border: 1px solid black;
-    margin-right: 1em;
-    padding: 0.5em 1em;
-    background: gray(77%);
-    &:hover {
-        background: gray(66%);
-    }
+  border: 1px solid black;
+  margin-right: 1em;
+  padding: 0.5em 1em;
+  background: gray(77%);
+  &:hover {
+    background: gray(66%);
+  }
 }
 
 form {
-    display: block;
-    padding: 1em;
-    background: #eee;
-    margin-bottom: 1em;
+  display: block;
+  padding: 1em;
+  background: #eee;
+  margin-bottom: 1em;
 }
 
 label {
-    display: block;
-    font-weight: bold;
-    span {
-        display: inline-block;
-        text-align: right;
-        padding-right: 1em;
-        vertical-align: top;
-        width: 10em;
-    }
-    &:last-child {
-        margin-bottom: 0;
-    }
+  display: block;
+  font-weight: bold;
+  span {
+    display: inline-block;
+    text-align: right;
+    padding-right: 1em;
+    vertical-align: top;
+    width: 10em;
+  }
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 @keyframes left {
-    from {
-        opacity: 0;
-        transform: translateX(-1em);
-    }
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
+  from {
+    opacity: 0;
+    transform: translateX(-1em);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 @keyframes fadein {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .hello {
-    display: block;
-    width: 50%;
-    padding: 2rem;
-    font-size: 1.5em;
-    background-color: hsl(0, 100%, 90%);
-    border: 1px solid hsl(0, 100%, 80%);
-    color: hsl(240, 100%, 80%);
-    animation: fadein 3s;
-    margin-bottom: 1em;
+  display: block;
+  width: 50%;
+  padding: 2rem;
+  font-size: 1.5em;
+  background-color: hsl(0, 100%, 90%);
+  border: 1px solid hsl(0, 100%, 80%);
+  color: hsl(240, 100%, 80%);
+  animation: fadein 3s;
+  margin-bottom: 1em;
 }
 
 .box {
-    border: 1px solid black;
-    background: #eee;
-    margin-bottom: 1em;
-    padding: 1em;
+  border: 1px solid black;
+  background: #eee;
+  margin-bottom: 1em;
+  padding: 1em;
 }
 
 menu {
-    display: block;
+  display: block;
+  height: 100%;
+  a {
+    display: inline-block;
+    padding: 0.6em 1em;
     height: 100%;
-    a {
-        display: inline-block;
-        padding: 0.6em 1em;
-        height: 100%;
-        background: #ddd;
-        &:hover {
-            background: #ccc;
-        }
+    background: #ddd;
+    &:hover {
+      background: #ccc;
     }
+  }
 }
 
 header,
 footer {
-    background: #eee;
+  background: #eee;
 }
