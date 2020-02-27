@@ -22,7 +22,7 @@
 	console.log('o1 === o3', o1 === o3);
 	console.log('o1.coucou === o3.coucou', o1.coucou === o3.coucou);
 
-	// Observables since ES5.1
+	// "get" and "set" since ES5.1
 	const hello = {
 		get world() {
 			console.log('try to access to the world...');
