@@ -10,6 +10,11 @@ module.exports = {
     bundle13: './app/13-list/main.jsx',
     bundle14: './app/14-form/main.jsx',
     bundle15: './app/15-form-select-textarea/main.jsx',
+    bundle16: './app/16-lifting-state/main.jsx',
+    bundle17: './app/17-heritage/main.jsx',
+    bundle18: './app/18-composition/main.jsx',
+    bundle19: './app/19-ref/main.jsx',
+    bundle20: './app/20-bind/main.jsx',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),

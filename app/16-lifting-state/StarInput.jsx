@@ -1,6 +1,6 @@
 import React from 'react';
 
-const imgDir = '../16-lifting-state/img';
+const imgDir = '/app/16-lifting-state/img';
 
 export default class StarInput extends React.Component {
     constructor(props) {
@@ -8,7 +8,6 @@ export default class StarInput extends React.Component {
         this.state = {
             note: this.getNote(props),
         };
-        
     }
 
     getNote(props) {
@@ -25,18 +24,12 @@ export default class StarInput extends React.Component {
         }
     }
 
-    componentWillReceiveProps(props) {
-        this.setState({
-            note: this.getNote(props),
-        });
-    }
-
     onClick(n, e) {
         e.preventDefault();
-        const state = {
+        const stateChange = {
             note: n,
         };
-        this.setState(state);
+        this.setState(stateChange);
         if (this.props.onChange) {
             this.props.onChange(n);
         }
