@@ -2,7 +2,7 @@ import React from 'react';
 
 import StarInput from '../16-lifting-state/StarInput';
 
-const imgDir = '../16-lifting-state/img';
+const imgDir = '/app/16-lifting-state/img';
 
 export class Star2Input extends StarInput {
 
@@ -21,7 +21,7 @@ export class Star2Input extends StarInput {
     }
 
     render() {
-        const array = Array.apply(null, { length: this.props.total });
+        const array = new Array(this.props.total).fill(undefined);
         console.log('array', array);
         const array2 = array.map((n, i) => i + 1);
         console.log('array2', array2);
