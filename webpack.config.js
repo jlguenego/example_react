@@ -6,6 +6,10 @@ module.exports = {
   entry: {
     bundle10: './app/10-state/main.jsx',
     bundle11: './app/11-event/main.jsx',
+    bundle12: './app/12-if/main.jsx',
+    bundle13: './app/13-list/main.jsx',
+    bundle14: './app/14-form/main.jsx',
+    bundle15: './app/15-form-select-textarea/main.jsx',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
