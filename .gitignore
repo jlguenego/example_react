@@ -1,3 +1,2 @@
-node_modules/
-wpk/
-app/**/out/
+/node_modules
+/dist
