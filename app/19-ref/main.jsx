@@ -26,9 +26,9 @@ class App extends React.Component {
         console.log('render app');
         return (
             <div>
-                <span ref={this.onRef.bind(this)} />
+                <span ref={this.onRef.bind('coucou')} />
                 <button onClick={this.switch.bind(this)}>{this.state.on ? 'Hide' : 'Show'}</button>
-                {this.state.on ? <Hello ref={this.onRef.bind(this)} name="JL" /> : ''}
+                {this.state.on ? <Hello ref={this.onRef.bind('toto')} name="JL" /> : ''}
             </div>
         );
     }
