@@ -5,6 +5,7 @@ module.exports = {
   mode: 'development',
   entry: {
     bundle10: './app/10-state/main.jsx',
+    bundle11: './app/11-event/main.jsx',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
