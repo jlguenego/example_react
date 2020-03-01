@@ -15,6 +15,13 @@ module.exports = {
     bundle18: './app/18-composition/main.jsx',
     bundle19: './app/19-ref/main.jsx',
     bundle20: './app/20-bind/main.jsx',
+    bundle21: './app/21-bubbling/main.jsx',
+    bundle22: './app/22-life-cycle/main.jsx',
+    bundle23: './app/23-store/main.jsx',
+    bundle24: './app/24-jlgux/main.jsx',
+    bundle25: './app/25-flux/main.jsx',
+    bundle26: './app/26-redux/main.jsx',
+    bundle27: './app/27-controlled-uncontrolled/main.jsx',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
