@@ -1,8 +1,6 @@
 export class Counter {
 
-	constructor() {
-		this.number = 10;
-	}
+	number = 10;
 
 	increment() {
 		this.number++;
@@ -21,6 +19,7 @@ export class Counter {
 	}
 }
 
+// The below class make number private.
 // export class Counter {
 
 // 	constructor() {
