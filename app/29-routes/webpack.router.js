@@ -31,7 +31,7 @@ router.use(webpackHotMiddleware(compiler, {
 
 
 // URL rewriting
-router.use((req, res, next) => {
+router.use((req, res) => {
 	res.sendFile('./index.html', { root: __dirname });
 });
 module.exports = router;
