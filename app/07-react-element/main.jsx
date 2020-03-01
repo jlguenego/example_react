@@ -1,3 +1,6 @@
+/* eslint-disable react/react-in-jsx-scope */
+/* global ReactDOM */ 
+
 function time() {
   return new Date().toLocaleTimeString();
 }

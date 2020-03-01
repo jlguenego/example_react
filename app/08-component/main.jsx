@@ -1,3 +1,8 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable react/react-in-jsx-scope */
+/* global ReactDOM React */
+
+
 // React functional component.
 function Hello1(props) {
   return <div className="hello">Hello {props.name}</div>;

@@ -1,3 +1,7 @@
+/* eslint-disable react/react-in-jsx-scope */
+/* global ReactDOM */
+
+
 // 1) Do not render unknown HTML5 element (warning).
 const e1 = <toto>test1</toto>;
 console.log('e1', e1);
@@ -5,6 +9,7 @@ ReactDOM.render(e1, document.getElementById('root1'));
 
 // 2) Do not render element starting with uppercase (considered as component) (error)
 try {
+  // eslint-disable-next-line react/jsx-no-undef
   const e2 = <Toto />;
   console.log('e2', e2);
 } catch (e) {
@@ -13,6 +18,7 @@ try {
 
 //3) Do not use attribute 'class', use 'className' instead. (warning)
 const e3 = (
+  // eslint-disable-next-line react/no-unknown-property
   <h1 titi="tata" class="hello">
     Hello
   </h1>
@@ -32,6 +38,7 @@ ReactDOM.render(e4, document.getElementById('root4'));
 // http://www.bradoncode.com/blog/2015/08/26/javascript-semi-colon-insertion/
 function getE4_1() {
   return;
+  // eslint-disable-next-line no-unreachable
   <div className="hello">Coucou !</div>;
 }
 console.log('e4.1', getE4_1());
