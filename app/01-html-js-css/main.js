@@ -33,23 +33,27 @@
       console.log('try to set something to the world...', value);
       this.$$hiddenWorld = value;
       return 'now it is ' + this.hiddenWorld;
-    }
+    },
   };
 
   Object.defineProperty(hello, '$$hiddenWorld', {
     value: 'coucou',
     configurable: false,
     writable: true,
-    enumerable: false
+    enumerable: false,
   });
   console.log('hello', hello);
 
   console.log('hello.world', hello.world);
   hello.world = 'foo';
-  console.log(`hello.world = 'bar';`, (hello.world = 'bar'));
+  console.log("hello.world = 'bar';", (hello.world = 'bar'));
   hello.$$hiddenWorld = 32;
   console.log('$$hiddenWorld in hello', '$$hiddenWorld' in hello);
-  console.log('hello.hasOwnProperty($$hiddenWorld)', hello.hasOwnProperty('$$hiddenWorld'));
+  console.log(
+    'hello.hasOwnProperty($$hiddenWorld)',
+    // eslint-disable-next-line no-prototype-builtins
+    hello.hasOwnProperty('$$hiddenWorld')
+  );
   for (var p in hello) {
     // List only enumerable properties.
     console.log('p', p);
