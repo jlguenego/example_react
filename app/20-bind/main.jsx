@@ -19,7 +19,7 @@ class App extends React.Component {
   render() {
     // <> is <React.Fragment> in short syntax.
     // :: is bind syntax (TC39 bind operator)
-    // On Feb 2018, VSCode is not ready for checking this new JS syntax :(
+    // But apparently in 2020, this :: operator is not part of JS syntax.
     return (
       <>
         <button onClick={::this.handleClick}>Click me!</button>
