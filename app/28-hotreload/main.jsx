@@ -5,9 +5,6 @@ import '../css/style.scss';
 
 import MyComponent from './MyComponent';
 
-
-
-
 const Main = () => <><MyComponent /><MyComponent /></>;
 
 document.addEventListener('DOMContentLoaded', () => {
