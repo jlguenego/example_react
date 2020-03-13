@@ -22,7 +22,7 @@ module.exports = {
     bundle25: './app/25-flux/main.jsx',
     bundle26: './app/26-redux/main.jsx',
     bundle27: './app/27-controlled-uncontrolled/main.jsx',
-    bundle28: './app/28-hotreload/main.jsx',
+    bundle28: './app/28-routes/main.jsx',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -30,9 +30,6 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx'],
-    alias: {
-      'react-dom': '@hot-loader/react-dom',
-    },
   },
   module: {
     rules: [

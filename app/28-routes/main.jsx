@@ -22,7 +22,7 @@ const Footer = () => <footer>
 </footer>;
 
 const Root = () => (
-    <Router basename="/app/29-routes/">
+    <Router basename="/app/28-routes/">
         <React.Fragment>
             <Header />
             <Route exact path="/" component={HomeView} />

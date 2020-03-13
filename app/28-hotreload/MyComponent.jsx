@@ -1,15 +1,14 @@
 import React from 'react';
-import { hot } from 'react-hot-loader';
 
 class MyComponent extends React.Component {
     constructor() {
         super();
-        this.state = { number: 12 };
+        this.state = { number: 10 };
     }
 
     increment() {
         this.setState(prevState => {
-            const n = prevState.number + 1;
+            const n = prevState.number + 2;
             return { number: n };
         });
     }
@@ -26,4 +25,4 @@ class MyComponent extends React.Component {
 }
 
 
-export default hot(module)(MyComponent);
+export default MyComponent;
