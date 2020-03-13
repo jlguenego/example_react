@@ -28,7 +28,7 @@ class Uncontrolled extends React.Component {
     }
 
     onClick(e) {
-        console.log('onClick');
+        console.log('onClick', e);
         this.setState({ text: this.input.value });
     }
 
