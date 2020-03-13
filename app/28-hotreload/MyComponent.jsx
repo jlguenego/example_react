@@ -4,7 +4,7 @@ import { hot } from 'react-hot-loader';
 class MyComponent extends React.Component {
     constructor() {
         super();
-        this.state = { number: 10 };
+        this.state = { number: 12 };
     }
 
     increment() {
