@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server",
     "start29": "nodemon --exec babel-node app/29-react-server/server.jsx",
+    "start30": "nodemon --exec babel-node app/30-server-routes/server.jsx",
     "lint": "eslint --ext js,jsx ."
   },
   "keywords": [],

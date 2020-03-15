@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const fs = require('fs');
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 // eslint-disable-next-line
 const webpackRouter = express.Router();
@@ -34,7 +35,10 @@ const array = ['10-state'];
 console.log('array', array);
 
 array.forEach(dir => {
-  webpackRouter.use('/app/' + dir, router(path.resolve(__dirname, 'app/' + dir)));
+  webpackRouter.use(
+    '/app/' + dir,
+    router(path.resolve(__dirname, 'app/' + dir))
+  );
 });
 
 module.exports = webpackRouter;
